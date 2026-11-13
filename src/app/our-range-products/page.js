@@ -1,8 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import Link from 'next/link';
-import { ArrowRight, ArrowDown, X } from 'lucide-react';
+import { ArrowDown, X } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import ProductDetailModal from '@/components/ProductDetailModal';
 import HomeCta from '@/components/HomeCta';
@@ -101,9 +100,6 @@ export default function OurRangeProductsPage() {
               <button type="button" onClick={() => pickArea('All')} className="btn btn-accent">
                 Browse catalogue <ArrowDown className="w-4 h-4" aria-hidden="true" />
               </button>
-              <Link href="/contact-us?type=distribution" className="btn btn-on-dark">
-                Request product pricing
-              </Link>
             </div>
             <dl className="mt-12 grid grid-cols-3 max-w-md rounded-xl bg-white/[0.06] ring-1 ring-white/10 backdrop-blur-sm divide-x divide-white/10">
               {stats.map((s) => (
@@ -203,7 +199,7 @@ export default function OurRangeProductsPage() {
                   key={product.id}
                   product={product}
                   onOpen={setActiveProductModal}
-                  actionLabel="Request product quote"
+                  actionLabel="View product"
                 />
               ))}
             </ProductGrid>
@@ -214,11 +210,11 @@ export default function OurRangeProductsPage() {
       </section>
 
       <HomeCta
-        eyebrow="Commercial Supply"
-        title="Need product supply for your pharmacy or clinic?"
-        accent="Ask for a quote."
-        primary={{ href: '/contact-us?type=distribution', label: 'Request pricing' }}
-        secondary={{ href: '/online-store', label: 'Online store' }}
+        eyebrow="Inquiries"
+        title="For inquiries, contact us on email."
+        accent={contentData.site.email}
+        primary={{ href: `mailto:${contentData.site.email}`, label: 'Email us' }}
+        secondary={null}
       />
 
       {activeProductModal && (

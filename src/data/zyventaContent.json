@@ -327,7 +327,24 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Two complementary actions. One convenient tablet.",
       "image": "/assets/images/zyvenkar-5-20mg.jpg",
-      "images": [{"label": "5/20 mg", "src": "/assets/images/zyvenkar-5-20mg.jpg"}, {"label": "5/40 mg", "src": "/assets/images/zyvenkar-5-40mg.jpg"}, {"label": "10/20 mg", "src": "/assets/images/zyvenkar-10-20mg.jpg"}, {"label": "10/40 mg", "src": "/assets/images/zyvenkar-10-40mg.jpg"}],
+      "images": [
+        {
+          "label": "5/20 mg",
+          "src": "/assets/images/zyvenkar-5-20mg.jpg"
+        },
+        {
+          "label": "5/40 mg",
+          "src": "/assets/images/zyvenkar-5-40mg.jpg"
+        },
+        {
+          "label": "10/20 mg",
+          "src": "/assets/images/zyvenkar-10-20mg.jpg"
+        },
+        {
+          "label": "10/40 mg",
+          "src": "/assets/images/zyvenkar-10-40mg.jpg"
+        }
+      ],
       "therapy": "Therapy - Cardiovascular",
       "isStore": false,
       "isWholesale": true
@@ -348,7 +365,16 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Reliable extended-release therapy for everyday treatment continuity.",
       "image": "/assets/images/desvenzyl-50mg.jpg",
-      "images": [{"label": "50 mg", "src": "/assets/images/desvenzyl-50mg.jpg"}, {"label": "100 mg", "src": "/assets/images/desvenzyl-100mg.jpg"}],
+      "images": [
+        {
+          "label": "50 mg",
+          "src": "/assets/images/desvenzyl-50mg.jpg"
+        },
+        {
+          "label": "100 mg",
+          "src": "/assets/images/desvenzyl-100mg.jpg"
+        }
+      ],
       "therapy": "Therapy - CNS & Neurology",
       "isStore": false,
       "isWholesale": true
@@ -369,7 +395,16 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Precision dosing to support confident seizure management.",
       "image": "/assets/images/lacolep-50mg.jpg",
-      "images": [{"label": "50 mg", "src": "/assets/images/lacolep-50mg.jpg"}, {"label": "100 mg", "src": "/assets/images/lacolep-100mg.jpg"}],
+      "images": [
+        {
+          "label": "50 mg",
+          "src": "/assets/images/lacolep-50mg.jpg"
+        },
+        {
+          "label": "100 mg",
+          "src": "/assets/images/lacolep-100mg.jpg"
+        }
+      ],
       "therapy": "Therapy - CNS & Neurology",
       "isStore": false,
       "isWholesale": true
@@ -390,7 +425,16 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Keep uric acid under control with dependable daily therapy.",
       "image": "/assets/images/febuvent-40mg.jpg",
-      "images": [{"label": "40 mg", "src": "/assets/images/febuvent-40mg.jpg"}, {"label": "80 mg", "src": "/assets/images/febuvent-80mg.jpg"}],
+      "images": [
+        {
+          "label": "40 mg",
+          "src": "/assets/images/febuvent-40mg.jpg"
+        },
+        {
+          "label": "80 mg",
+          "src": "/assets/images/febuvent-80mg.jpg"
+        }
+      ],
       "therapy": "Therapy - Orthopedic & Pain Care",
       "isStore": false,
       "isWholesale": true
@@ -411,7 +455,16 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Flexible strengths for effective thyroid management.",
       "image": "/assets/images/akthyod-5mg.jpg",
-      "images": [{"label": "5 mg", "src": "/assets/images/akthyod-5mg.jpg"}, {"label": "20 mg", "src": "/assets/images/akthyod-20mg.jpg"}],
+      "images": [
+        {
+          "label": "5 mg",
+          "src": "/assets/images/akthyod-5mg.jpg"
+        },
+        {
+          "label": "20 mg",
+          "src": "/assets/images/akthyod-20mg.jpg"
+        }
+      ],
       "therapy": "Therapy - Metabolic & Diabetes",
       "isStore": false,
       "isWholesale": true
@@ -434,7 +487,17 @@
       "image": "/assets/images/nourisil-md.jpg",
       "therapy": "Therapy - Dermatology",
       "isStore": true,
-      "isWholesale": true
+      "isWholesale": true,
+      "images": [
+        {
+          "label": "10 g tube",
+          "src": "/assets/images/nourisil-md.jpg"
+        },
+        {
+          "label": "30 g pump",
+          "src": "/assets/images/nourisil-md-30g.webp"
+        }
+      ]
     },
     {
       "id": "nevral",
@@ -472,7 +535,16 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "A balanced botanical formula for calmer, more relaxed days.",
       "image": "/assets/images/calmirelax-front.jpg",
-      "images": [{"label": "Pack", "src": "/assets/images/calmirelax-front.jpg"}, {"label": "With tablets", "src": "/assets/images/calmirelax-pills.jpg"}],
+      "images": [
+        {
+          "label": "Pack",
+          "src": "/assets/images/calmirelax-front.jpg"
+        },
+        {
+          "label": "With tablets",
+          "src": "/assets/images/calmirelax-pills.jpg"
+        }
+      ],
       "therapy": "Therapy - CNS & Neurology",
       "isStore": true,
       "isWholesale": true
@@ -493,7 +565,16 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Unwind naturally and support a more restful night.",
       "image": "/assets/images/calmidormin-night.jpg",
-      "images": [{"label": "Pack", "src": "/assets/images/calmidormin-night.jpg"}, {"label": "With tablets", "src": "/assets/images/calmidormin-pills.jpg"}],
+      "images": [
+        {
+          "label": "Pack",
+          "src": "/assets/images/calmidormin-night.jpg"
+        },
+        {
+          "label": "With tablets",
+          "src": "/assets/images/calmidormin-pills.jpg"
+        }
+      ],
       "therapy": "Therapy - CNS & Neurology",
       "isStore": true,
       "isWholesale": true
@@ -614,7 +695,16 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Dual-action cardiovascular support in one convenient dose.",
       "image": "/assets/images/zybitel-80-5mg.jpg",
-      "images": [{"label": "80/5 mg", "src": "/assets/images/zybitel-80-5mg.jpg"}, {"label": "80/10 mg", "src": "/assets/images/zybitel-80-10mg.jpg"}],
+      "images": [
+        {
+          "label": "80/5 mg",
+          "src": "/assets/images/zybitel-80-5mg.jpg"
+        },
+        {
+          "label": "80/10 mg",
+          "src": "/assets/images/zybitel-80-10mg.jpg"
+        }
+      ],
       "therapy": "Therapy - Cardiovascular",
       "isStore": false,
       "isWholesale": true
@@ -635,7 +725,20 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Two complementary mechanisms for confident glucose management.",
       "image": "/assets/images/vildagard-50-500mg.jpg",
-      "images": [{"label": "50/500 mg", "src": "/assets/images/vildagard-50-500mg.jpg"}, {"label": "50/850 mg", "src": "/assets/images/vildagard-50-850mg.jpg"}, {"label": "50/1000 mg", "src": "/assets/images/vildagard-50-1000mg.jpg"}],
+      "images": [
+        {
+          "label": "50/500 mg",
+          "src": "/assets/images/vildagard-50-500mg.jpg"
+        },
+        {
+          "label": "50/850 mg",
+          "src": "/assets/images/vildagard-50-850mg.jpg"
+        },
+        {
+          "label": "50/1000 mg",
+          "src": "/assets/images/vildagard-50-1000mg.jpg"
+        }
+      ],
       "therapy": "Therapy - Metabolic & Diabetes",
       "isStore": false,
       "isWholesale": true
@@ -656,7 +759,16 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Simple once-daily support for long-term blood-pressure control.",
       "image": "/assets/images/telmijub-40mg.jpg",
-      "images": [{"label": "40 mg", "src": "/assets/images/telmijub-40mg.jpg"}, {"label": "80 mg", "src": "/assets/images/telmijub-80mg.jpg"}],
+      "images": [
+        {
+          "label": "40 mg",
+          "src": "/assets/images/telmijub-40mg.jpg"
+        },
+        {
+          "label": "80 mg",
+          "src": "/assets/images/telmijub-80mg.jpg"
+        }
+      ],
       "therapy": "Therapy - Cardiovascular",
       "isStore": false,
       "isWholesale": true

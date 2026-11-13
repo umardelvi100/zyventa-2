@@ -9,8 +9,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-10 sm:py-14 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center reveal">
           <div className="lg:col-span-7">
-            <p className="eyebrow">Healthcare market entry · GCC, Middle East &amp; North Africa</p>
-            <h1 className="display mt-6 text-[2.6rem] sm:text-6xl lg:text-[4.2rem]">
+            <h1 className="display text-[2.6rem] sm:text-6xl lg:text-[4.2rem]">
               Creating a <em>healthy</em> tomorrow, across the Middle East &amp; North&nbsp;Africa.
             </h1>
             <p className="mt-7 max-w-xl text-lg text-ink-80 leading-relaxed">
