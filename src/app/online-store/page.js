@@ -8,7 +8,7 @@ import ProductDetailModal from '@/components/ProductDetailModal';
 import HomeCta from '@/components/HomeCta';
 import { SearchField, ChipGroup, ProductCard, ProductGrid, EmptyState } from '@/components/Catalog';
 
-const CATEGORIES = ['All', 'Dermatology', 'CNS & Neurology', 'Orthopedic & Pain Care', 'Gastroenterology'];
+const CATEGORIES = ['All', 'Dermatology', 'CNS & Neurology', 'Orthopedic & Pain Care', 'Anorectal Care'];
 
 export default function OnlineStorePage() {
   const [searchTerm, setSearchTerm] = useState('');

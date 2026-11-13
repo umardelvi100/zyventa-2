@@ -10,7 +10,7 @@ import { CountUp } from '@/components/Motion';
 import HeroSlideshow from '@/components/HeroSlideshow';
 import {
   SearchField, ChipGroup, ProductCard, ProductGrid, EmptyState,
-  TherapyTiles, Spotlight, therapyStyle, hasPackShot,
+  TherapyTiles, therapyStyle, hasPackShot,
 } from '@/components/Catalog';
 
 const RX_OPTIONS = [
@@ -19,7 +19,6 @@ const RX_OPTIONS = [
   { value: 'OTC', label: 'OTC' },
 ];
 
-const SPOTLIGHT_IDS = ['troximetacin-gel', 'calmivenal-gel', 'nourisil-md'];
 
 export default function OurRangeProductsPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -129,7 +128,6 @@ export default function OurRangeProductsPage() {
               <p className="eyebrow">Therapy areas</p>
               <h2 className="display mt-4 text-3xl sm:text-4xl">Browse by <em>therapy area</em>.</h2>
             </div>
-            <p className="text-sm text-ink-60">Select an area to filter the catalogue.</p>
           </div>
           <div className="mt-10">
             <TherapyTiles categories={therapyAreas} products={products} value={selectedCategory} onChange={pickArea} />
@@ -145,12 +143,23 @@ export default function OurRangeProductsPage() {
               <p className="eyebrow !text-brand-green">Spotlight</p>
               <h2 className="display !text-brand-paper mt-4 text-3xl sm:text-4xl">First to market in the UAE, Oman and <em>KSA</em>.</h2>
             </div>
-            <Link href="/#track-record" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-paper hover:text-brand-green transition-colors">
-              Our track record <ArrowRight className="w-4 h-4" aria-hidden="true" />
-            </Link>
           </div>
-          <div className="mt-10">
-            <Spotlight products={byId(SPOTLIGHT_IDS)} onOpen={setActiveProductModal} />
+          <div className="mt-8">
+            <ol className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8">
+              {contentData.firstToMarket.regionFirsts.map((p, i) => (
+                <li key={p.name} className="grid grid-cols-[1.75rem_1fr] items-baseline py-2.5 border-b border-white/15">
+                  <span className="font-display text-xs text-brand-green">{String(i + 1).padStart(2, '0')}</span>
+                  <span>
+                    <span className="block font-display text-base text-brand-paper">{p.name}</span>
+                    <span className="block text-xs text-brand-onDarkMuted mt-0.5">{p.use}</span>
+                  </span>
+                </li>
+              ))}
+            </ol>
+            <div className="mt-5 border-t-2 border-brand-green pt-4">
+              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-brand-green">First generic entrant in the UAE</p>
+              <p className="mt-1 font-display text-xl text-brand-paper">{contentData.firstToMarket.firstGenerics.join(' and ')}</p>
+            </div>
           </div>
         </div>
       </section>

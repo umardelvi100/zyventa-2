@@ -1,44 +1,47 @@
-'use client';
-
-import { useState, useRef } from 'react';
 import Link from 'next/link';
-import { Play, Pause, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import { CountUp } from '@/components/Motion';
 
 export default function Hero() {
-  const [isPlaying, setIsPlaying] = useState(true);
-  const videoRef = useRef(null);
-
-  const togglePlay = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    if (isPlaying) {
-      video.pause();
-      setIsPlaying(false);
-    } else {
-      video.play();
-      setIsPlaying(true);
-    }
-  };
-
   return (
     <section id="hero" className="bg-brand-paper pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="py-14 sm:py-20 max-w-4xl border-b border-brand-border reveal">
-          <h1 className="display text-[2.6rem] sm:text-6xl lg:text-[4.6rem]">
-            Creating a <em>healthy</em> tomorrow, across the Middle East &amp; North&nbsp;Africa.
-          </h1>
-          <p className="mt-7 max-w-2xl text-lg text-ink-80 leading-relaxed">
-            We connect global pharmaceutical and biotechnology companies with the patients who need them, from registration to the pharmacy shelf.
-          </p>
-          <div className="mt-9 flex flex-wrap items-center gap-6">
-            <Link href="/contact-us" className="btn btn-accent">
-              Partner with us <ArrowRight className="w-4 h-4" aria-hidden="true" />
-            </Link>
-            <Link href="/services" className="link-accent">
-              See what we do <ArrowRight className="w-4 h-4" aria-hidden="true" />
-            </Link>
+        <div className="py-10 sm:py-14 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center reveal">
+          <div className="lg:col-span-7">
+            <p className="eyebrow">Healthcare market entry · GCC, Middle East &amp; North Africa</p>
+            <h1 className="display mt-6 text-[2.6rem] sm:text-6xl lg:text-[4.2rem]">
+              Creating a <em>healthy</em> tomorrow, across the Middle East &amp; North&nbsp;Africa.
+            </h1>
+            <p className="mt-7 max-w-xl text-lg text-ink-80 leading-relaxed">
+              We connect global pharmaceutical and biotechnology companies with the patients who need them, from registration to the pharmacy shelf.
+            </p>
+            <div className="mt-9 flex flex-wrap items-center gap-6">
+              <Link href="/contact-us" className="btn btn-accent">
+                Partner with us <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
+              <Link href="/services" className="link-accent">
+                See what we do <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="lg:col-span-5 relative mx-auto w-full max-w-md lg:max-w-none pb-6">
+            <div className="relative aspect-[4/5] max-h-[520px] w-full overflow-hidden rounded-3xl">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/assets/images/hero-dubai-bridge.webp"
+                alt="Pedestrian bridge at sunset with the Dubai skyline in the distance"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute left-4 right-4 bottom-0 sm:left-6 sm:right-6 rounded-2xl bg-white p-5 shadow-[0_20px_40px_-20px_rgb(0_0_0/0.35)] border-l-4 border-brand-green">
+              <p className="font-display text-xl sm:text-2xl leading-tight text-brand-navy">Global partnerships. Local understanding.</p>
+              <p className="mt-1.5 text-sm text-ink-80">Discover the people and purpose behind Zyventa.</p>
+              <Link href="/about-us" className="link-accent mt-2 text-sm">
+                About Zyventa <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -64,34 +67,6 @@ export default function Hero() {
             </div>
           ))}
         </dl>
-
-        {/* Company film */}
-        <figure className="mt-14 sm:mt-20 reveal" style={{ animationDelay: '.15s' }}>
-          <div className="relative aspect-[21/9] w-full bg-brand-navy overflow-hidden rounded-md">
-            <video
-              ref={videoRef}
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              poster="/assets/images/connected-logistics-and-supply-chain-concept-table-tennis-ball-with-plane-trucks-train-and-ship-s-300x200.jpg"
-              aria-label="Zyventa company film"
-              className="absolute inset-0 w-full h-full object-cover"
-            >
-              <source src={contentData.site.videoSrc} type="video/mp4" />
-            </video>
-            <button
-              type="button"
-              onClick={togglePlay}
-              className="absolute bottom-4 right-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-paper/90 text-brand-navy text-xs font-bold hover:bg-brand-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green"
-              aria-label={isPlaying ? 'Pause video' : 'Play video'}
-            >
-              {isPlaying ? <Pause className="w-3.5 h-3.5 fill-current" /> : <Play className="w-3.5 h-3.5 fill-current" />}
-              <span>{isPlaying ? 'Pause' : 'Play'}</span>
-            </button>
-          </div>
-        </figure>
       </div>
       <div className="h-16 sm:h-24" />
     </section>

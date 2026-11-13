@@ -13,7 +13,7 @@ export const THERAPY_STYLES = {
   'Orthopedic & Pain Care': { tint: '#FCEBDA', accent: '#B4561A', short: 'Ortho' },
   'Metabolic & Diabetes': { tint: '#E2F2EC', accent: '#1F7A5C', short: 'Metabolic' },
   'Dermatology': { tint: '#FBE8F0', accent: '#A23B67', short: 'Derma' },
-  'Gastroenterology': { tint: '#E3EEF7', accent: '#1D5F8A', short: 'GI' },
+  'Anorectal Care': { tint: '#E3EEF7', accent: '#1D5F8A', short: 'AR' },
 };
 const DEFAULT_STYLE = { tint: '#EEF1F4', accent: '#334155', short: '' };
 export const therapyStyle = (category) => THERAPY_STYLES[category] || DEFAULT_STYLE;

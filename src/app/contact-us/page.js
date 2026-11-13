@@ -43,6 +43,7 @@ export default function ContactUsPage() {
   const details = [
     { label: 'Office', value: contentData.site.address },
     { label: 'Email', value: contentData.site.email, href: `mailto:${contentData.site.email}` },
+    { label: 'Office phone', value: contentData.site.phone, href: `tel:${contentData.site.phoneHref}` },
     { label: 'Hours', value: 'Monday to Friday, 8:30 AM to 5:30 PM (GST)' },
   ];
 
