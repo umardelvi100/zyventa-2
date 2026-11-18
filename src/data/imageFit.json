@@ -1,0 +1,11 @@
+{
+  "_readme": "Optional per-photo tuning for product cards in the catalogue grid. Key = image path. scale: 1 = whole photo shown (default); >1 zooms in on the pack so small products don't look tiny. x / y: shift the photo in % of the frame to keep the product centred.",
+  "/assets/images/febuvent-40mg.jpg": { "scale": 1.1 },
+  "/assets/images/nevral.jpg": { "scale": 1.6 },
+  "/assets/images/calmirelax-front.jpg": { "scale": 1.2 },
+  "/assets/images/calmidormin-night.jpg": { "scale": 1.2 },
+  "/assets/images/calmivenal-gel.jpg": { "scale": 1.5, "y": 2 },
+  "/assets/images/troximetacin-gel.jpg": { "scale": 1.6, "y": 2 },
+  "/assets/images/breezex.jpg": { "scale": 1.15 },
+  "/assets/images/zyflex.jpg": { "scale": 1.1 }
+}

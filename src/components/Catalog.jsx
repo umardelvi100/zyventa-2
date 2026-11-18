@@ -1,6 +1,7 @@
 import { Search, ArrowRight, ArrowUpRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import imageSizes from '@/data/imageSizes.json';
+import imageFit from '@/data/imageFit.json';
 import { Reveal } from '@/components/Motion';
 import MarketplaceLinks from '@/components/MarketplaceLinks';
 
@@ -33,11 +34,36 @@ export const imageRatio = (src) => {
   return w / h;
 };
 
+// Per-photo tuning for the uniform catalogue-card frame (src/data/imageFit.json).
+// Photos are shot with the pack at different distances, so a few need a little zoom
+// (scale) and/or a nudge (x, y in % of the frame) to look the same size and centred.
+export const imageFitFor = (src) => {
+  const f = imageFit[src] || {};
+  return { scale: f.scale ?? 1, x: f.x ?? 0, y: f.y ?? 0 };
+};
+
 // Real pack shot when we have one; otherwise a designed pack graphic so a
 // product never shows another company's logo or another product's box.
 // `fill` renders the photo edge to edge at its own proportions: no frame, tint or padding.
-export function ProductVisual({ product, size = 'card', imgClassName = '', fill = false }) {
+// `frame` fills a parent of fixed size (the uniform catalogue-card image area): the whole
+// photo, centred, never stretched or cropped, with optional per-photo scale/offset.
+export function ProductVisual({ product, size = 'card', imgClassName = '', fill = false, frame = false }) {
   const style = therapyStyle(product.category);
+  if (hasPackShot(product) && frame) {
+    const { scale, x, y } = imageFitFor(product.image);
+    const [w, h] = imageSize(product.image);
+    return (
+      <img
+        src={product.image}
+        alt={product.name}
+        width={w}
+        height={h}
+        className={`absolute inset-0 h-full w-full object-contain object-center ${imgClassName}`}
+        style={scale !== 1 || x || y ? { transform: `translate(${x}%, ${y}%) scale(${scale})` } : undefined}
+        loading="lazy"
+      />
+    );
+  }
   if (hasPackShot(product) && fill) {
     const [w, h] = imageSize(product.image);
     return (
@@ -238,14 +264,14 @@ export function ProductCard({ product, onOpen, actionLabel, showMarketplaces = f
   const highlights = productHighlights(product.id);
   const style = therapyStyle(product.category);
   return (
-    <article className="group flex flex-col rounded-2xl bg-white border border-brand-border overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_28px_48px_-24px_rgb(var(--c-navy)/0.35)]">
+    <article className="group flex h-full flex-col rounded-2xl bg-white border border-brand-border overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_28px_48px_-24px_rgb(var(--c-navy)/0.35)]">
       <button
         type="button"
         onClick={() => onOpen(product)}
-        className="relative block w-full overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green"
+        className="relative block w-full aspect-[4/3] shrink-0 overflow-hidden bg-brand-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green"
         aria-label={`View ${product.name}`}
       >
-        <ProductVisual fill product={product} />
+        <ProductVisual frame product={product} />
         {highlights.length > 0 && (
           <span className="absolute top-3 left-3 flex flex-col items-start gap-1">
             {highlights.map((h) => (
@@ -266,10 +292,10 @@ export function ProductCard({ product, onOpen, actionLabel, showMarketplaces = f
             <span className={`tag ${product.isRx ? 'tag-rx' : 'tag-otc'}`}>{product.isRx ? 'Rx' : 'OTC'}</span>
           )}
         </div>
-        <h3 className="mt-3 font-display text-2xl text-brand-navy">{product.name}</h3>
-        {product.tagline && <p className="mt-1 text-sm text-ink-60 line-clamp-2">{product.tagline}</p>}
+        <h3 className="mt-3 font-display text-2xl text-brand-navy line-clamp-1">{product.name}</h3>
+        {product.tagline && <p className="mt-1 text-sm text-ink-60 line-clamp-2 min-h-[2.5rem]">{product.tagline}</p>}
         {product.composition && (
-          <p className="mt-4 pt-4 border-t border-brand-border text-xs text-ink-80 line-clamp-2">
+          <p className="mt-4 pt-4 border-t border-brand-border text-xs text-ink-80 line-clamp-2 min-h-[3.25rem]">
             <span className="font-bold text-brand-blue">Active · </span>
             {product.composition}
           </p>
@@ -285,13 +311,13 @@ export function ProductCard({ product, onOpen, actionLabel, showMarketplaces = f
   );
 }
 
-// Staggered columns: each card's photo keeps its own proportions, so cards in a
-// row differ in height instead of cropping or padding the photos.
+// Even grid: every card has the same image frame and stretches to the row height,
+// so titles, details and buttons line up across each row.
 export function ProductGrid({ children }) {
   return (
     <Reveal
       stagger
-      className="columns-1 sm:columns-2 lg:columns-3 gap-x-6 [&>*]:mb-6 [&>*]:break-inside-avoid"
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"
     >
       {children}
     </Reveal>
