@@ -175,7 +175,8 @@
 }
 
 .site-header-scrolled {
-  background: rgb(var(--c-paper) / 0.92);
+  /* Solid white so the logo artwork (white background) never shows a box */
+  background: rgb(var(--c-paper));
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgb(var(--c-border) / 0.9);
   box-shadow: none;
@@ -301,10 +302,10 @@ h1.font-heading, h2.font-heading, h3.font-heading {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.45rem 0.9rem;
-  border: 1px solid rgb(var(--c-slate-200));
+  padding: 0.7rem 1.35rem;
+  border: 1px solid rgb(var(--c-slate-300));
   border-radius: 999px;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: rgb(var(--c-ink-80));
   background: transparent;

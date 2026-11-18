@@ -7,6 +7,7 @@ import PageHeader from '@/components/PageHeader';
 import ProductDetailModal from '@/components/ProductDetailModal';
 import HomeCta from '@/components/HomeCta';
 import { SearchField, ChipGroup, ProductCard, ProductGrid, EmptyState } from '@/components/Catalog';
+import { MarketplaceBadges } from '@/components/MarketplaceLinks';
 
 const CATEGORIES = ['All', 'Dermatology', 'CNS & Neurology', 'Orthopedic & Pain Care', 'Gastroenterology'];
 
@@ -38,11 +39,22 @@ export default function OnlineStorePage() {
 
       <section className="py-14 sm:py-20 bg-brand-paper">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* E-commerce marketing: the same products are sold on the marketplaces */}
+          <aside className="mb-14 rounded-r-xl border-l-4 border-brand-green bg-brand-sand p-6 sm:p-8" aria-label="Also available on online marketplaces">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-4">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-ink-60">Selected products also on</p>
+              <MarketplaceBadges />
+            </div>
+            <p className="mt-5 max-w-3xl text-base sm:text-lg text-ink-80 leading-relaxed">
+              Our digital marketing extends to e-commerce. Alongside our own online store, selected Zyventa products are available on leading online marketplaces such as Amazon and noon, making it easier for customers across the region to find and order them.
+            </p>
+          </aside>
+
           <div className="grid lg:grid-cols-12 gap-8 items-end">
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-4">
               <SearchField value={searchTerm} onChange={setSearchTerm} placeholder="Search store products" />
             </div>
-            <div className="lg:col-span-7 lg:justify-self-end">
+            <div className="lg:col-span-8 lg:justify-self-end">
               <ChipGroup options={CATEGORIES} value={selectedCategory} onChange={setSelectedCategory} />
             </div>
           </div>
@@ -60,7 +72,7 @@ export default function OnlineStorePage() {
           {filtered.length > 0 ? (
             <ProductGrid>
               {filtered.map((product) => (
-                <ProductCard key={product.id} product={product} onOpen={setActiveModalProduct} actionLabel="View and order" />
+                <ProductCard key={product.id} product={product} onOpen={setActiveModalProduct} actionLabel="View and order" showMarketplaces />
               ))}
             </ProductGrid>
           ) : (
@@ -78,7 +90,7 @@ export default function OnlineStorePage() {
       />
 
       {activeModalProduct && (
-        <ProductDetailModal product={activeModalProduct} onClose={() => setActiveModalProduct(null)} />
+        <ProductDetailModal product={activeModalProduct} onClose={() => setActiveModalProduct(null)} showMarketplaces />
       )}
     </div>
   );

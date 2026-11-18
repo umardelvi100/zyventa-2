@@ -88,6 +88,10 @@ export default function AboutUsPage() {
               ))}
             </ul>
             <div className="border-t border-white/15 pt-6">
+              <p className="eyebrow !text-brand-green">{contentData.scientificOffice.title}</p>
+              <p className="mt-4 font-display text-3xl sm:text-4xl leading-tight">{contentData.scientificOffice.name}</p>
+            </div>
+            <div className="border-t border-white/15 pt-6">
               <p className="text-sm font-bold text-brand-green">{contentData.drugStore.approval}</p>
               <p className="mt-2 text-lg leading-relaxed">{contentData.drugStore.role}</p>
             </div>

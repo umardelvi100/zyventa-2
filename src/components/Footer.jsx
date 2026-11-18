@@ -33,11 +33,14 @@ export default function Footer() {
           
           {/* Brand Info & Address (Col 1 - 4 cols) */}
           <div className="lg:col-span-4 space-y-6">
-            <Link href="/" className="inline-block" aria-label="Zyventa Home">
+            {/* The full-colour logo sits on a white plate so it stays legible on the navy footer */}
+            <Link href="/" className="inline-block rounded-md bg-white px-4 py-2.5" aria-label="Zyventa Home">
               <img
                 src={contentData.site.logo}
-                alt="Zyventa"
-                className="h-12 w-auto object-contain brightness-0 invert"
+                alt="Zyventa Biocare Drug Store LLC - Creating Healthy Tomorrow"
+                width={1600}
+                height={533}
+                className="h-14 w-auto object-contain"
               />
             </Link>
 

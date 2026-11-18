@@ -5,7 +5,7 @@
     "heroHeadline": "ZYVENTA: Your MENA healthcare bridge!",
     "heroSubheadline": "We provide world-class support to those who want to enter the most promising markets of Middle East & North Africa, with the help of the most dynamic management team. We recognize that our team is what makes us who we are.",
     "videoSrc": "/assets/videos/Zyventa-Promo-Landscape-V3.mp4",
-    "logo": "/assets/logos/cropped-zyventa-logo-png1.png",
+    "logo": "/assets/logos/zyventa-biocare-logo.jpg",
     "email": "contact@zyventa.com",
     "address": "Office No. 323, 3rd Floor, Al Rehan Block, Omniyat Building, Al Mamzar, Dubai, UAE",
     "aboutText": "ZYVENTA was founded to serve as a link between international healthcare companies and the growing markets of Arabian Gulf and the Middle East. ZYVENTA bridges access gaps by partnering with global pharmaceutical and biotechnology companies to deploy and commercialize new pharmaceutical, biologics, and other healthcare solutions in the Middle East and North Africa (MENA) markets.",
@@ -175,6 +175,11 @@
       "country": "Saudi Arabia"
     },
     {
+      "name": "Ultra Pharma",
+      "logo": "/assets/logos/partners/ultra-pharma.png",
+      "country": "Saudi Arabia"
+    },
+    {
       "name": "Vista Pharma",
       "logo": "/assets/logos/partners/vista-pharma.png",
       "country": "Oman"
@@ -324,7 +329,24 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Two complementary actions. One convenient tablet.",
       "image": "/assets/images/zyvenkar-5-20mg.jpg",
-      "images": [{"label": "5/20 mg", "src": "/assets/images/zyvenkar-5-20mg.jpg"}, {"label": "5/40 mg", "src": "/assets/images/zyvenkar-5-40mg.jpg"}, {"label": "10/20 mg", "src": "/assets/images/zyvenkar-10-20mg.jpg"}, {"label": "10/40 mg", "src": "/assets/images/zyvenkar-10-40mg.jpg"}],
+      "images": [
+        {
+          "label": "5/20 mg",
+          "src": "/assets/images/zyvenkar-5-20mg.jpg"
+        },
+        {
+          "label": "5/40 mg",
+          "src": "/assets/images/zyvenkar-5-40mg.jpg"
+        },
+        {
+          "label": "10/20 mg",
+          "src": "/assets/images/zyvenkar-10-20mg.jpg"
+        },
+        {
+          "label": "10/40 mg",
+          "src": "/assets/images/zyvenkar-10-40mg.jpg"
+        }
+      ],
       "therapy": "Therapy - Cardiovascular",
       "isStore": false,
       "isWholesale": true
@@ -345,7 +367,16 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Reliable extended-release therapy for everyday treatment continuity.",
       "image": "/assets/images/desvenzyl-50mg.jpg",
-      "images": [{"label": "50 mg", "src": "/assets/images/desvenzyl-50mg.jpg"}, {"label": "100 mg", "src": "/assets/images/desvenzyl-100mg.jpg"}],
+      "images": [
+        {
+          "label": "50 mg",
+          "src": "/assets/images/desvenzyl-50mg.jpg"
+        },
+        {
+          "label": "100 mg",
+          "src": "/assets/images/desvenzyl-100mg.jpg"
+        }
+      ],
       "therapy": "Therapy - CNS & Neurology",
       "isStore": false,
       "isWholesale": true
@@ -366,7 +397,16 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Precision dosing to support confident seizure management.",
       "image": "/assets/images/lacolep-50mg.jpg",
-      "images": [{"label": "50 mg", "src": "/assets/images/lacolep-50mg.jpg"}, {"label": "100 mg", "src": "/assets/images/lacolep-100mg.jpg"}],
+      "images": [
+        {
+          "label": "50 mg",
+          "src": "/assets/images/lacolep-50mg.jpg"
+        },
+        {
+          "label": "100 mg",
+          "src": "/assets/images/lacolep-100mg.jpg"
+        }
+      ],
       "therapy": "Therapy - CNS & Neurology",
       "isStore": false,
       "isWholesale": true
@@ -387,7 +427,16 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Keep uric acid under control with dependable daily therapy.",
       "image": "/assets/images/febuvent-40mg.jpg",
-      "images": [{"label": "40 mg", "src": "/assets/images/febuvent-40mg.jpg"}, {"label": "80 mg", "src": "/assets/images/febuvent-80mg.jpg"}],
+      "images": [
+        {
+          "label": "40 mg",
+          "src": "/assets/images/febuvent-40mg.jpg"
+        },
+        {
+          "label": "80 mg",
+          "src": "/assets/images/febuvent-80mg.jpg"
+        }
+      ],
       "therapy": "Therapy - Orthopedic & Pain Care",
       "isStore": false,
       "isWholesale": true
@@ -408,7 +457,16 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Flexible strengths for effective thyroid management.",
       "image": "/assets/images/akthyod-5mg.jpg",
-      "images": [{"label": "5 mg", "src": "/assets/images/akthyod-5mg.jpg"}, {"label": "20 mg", "src": "/assets/images/akthyod-20mg.jpg"}],
+      "images": [
+        {
+          "label": "5 mg",
+          "src": "/assets/images/akthyod-5mg.jpg"
+        },
+        {
+          "label": "20 mg",
+          "src": "/assets/images/akthyod-20mg.jpg"
+        }
+      ],
       "therapy": "Therapy - Metabolic & Diabetes",
       "isStore": false,
       "isWholesale": true
@@ -431,7 +489,19 @@
       "image": "/assets/images/nourisil-md.jpg",
       "therapy": "Therapy - Dermatology",
       "isStore": true,
-      "isWholesale": true
+      "isWholesale": true,
+      "marketplaces": [
+        {
+          "label": "10 g tube",
+          "amazon": "https://www.amazon.ae/dp/B0DFTNC4WT",
+          "noon": "https://www.noon.com/uae-en/product/Z9166A20C865E0D214BBEZ/p/?o=z9166a20c865e0d214bbez-1"
+        },
+        {
+          "label": "30 g pump",
+          "amazon": "https://www.amazon.ae/dp/B0DKVN4F6S",
+          "noon": "https://www.noon.com/uae-en/product/Z6CACD890E5DC2E87FB39Z/p/?o=z6cacd890e5dc2e87fb39z-1"
+        }
+      ]
     },
     {
       "id": "nevral",
@@ -451,7 +521,13 @@
       "image": "/assets/images/nevral.jpg",
       "therapy": "Therapy - CNS & Neurology",
       "isStore": true,
-      "isWholesale": true
+      "isWholesale": true,
+      "marketplaces": [
+        {
+          "amazon": "https://www.amazon.ae/dp/B0H9NQGLFZ",
+          "noon": "https://www.noon.com/uae-en/product/ZB4783E6302311BADBF1FZ/p/?o=zb4783e6302311badbf1fz-1"
+        }
+      ]
     },
     {
       "id": "calmi-relax",
@@ -469,10 +545,24 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "A balanced botanical formula for calmer, more relaxed days.",
       "image": "/assets/images/calmirelax-front.jpg",
-      "images": [{"label": "Pack", "src": "/assets/images/calmirelax-front.jpg"}, {"label": "With tablets", "src": "/assets/images/calmirelax-pills.jpg"}],
+      "images": [
+        {
+          "label": "Pack",
+          "src": "/assets/images/calmirelax-front.jpg"
+        },
+        {
+          "label": "With tablets",
+          "src": "/assets/images/calmirelax-pills.jpg"
+        }
+      ],
       "therapy": "Therapy - CNS & Neurology",
       "isStore": true,
-      "isWholesale": true
+      "isWholesale": true,
+      "marketplaces": [
+        {
+          "amazon": "https://www.amazon.ae/dp/B0DHF4J5MX"
+        }
+      ]
     },
     {
       "id": "calmi-dormin",
@@ -490,7 +580,16 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Unwind naturally and support a more restful night.",
       "image": "/assets/images/calmidormin-night.jpg",
-      "images": [{"label": "Pack", "src": "/assets/images/calmidormin-night.jpg"}, {"label": "With tablets", "src": "/assets/images/calmidormin-pills.jpg"}],
+      "images": [
+        {
+          "label": "Pack",
+          "src": "/assets/images/calmidormin-night.jpg"
+        },
+        {
+          "label": "With tablets",
+          "src": "/assets/images/calmidormin-pills.jpg"
+        }
+      ],
       "therapy": "Therapy - CNS & Neurology",
       "isStore": true,
       "isWholesale": true
@@ -513,7 +612,13 @@
       "image": "/assets/images/calmivenal-gel.jpg",
       "therapy": "Therapy - Gastroenterology",
       "isStore": true,
-      "isWholesale": true
+      "isWholesale": true,
+      "marketplaces": [
+        {
+          "amazon": "https://www.amazon.ae/dp/B0DHNZ6KXK",
+          "noon": "https://www.noon.com/uae-en/product/Z53C9D66F463C0E80D31BZ/p/?o=z53c9d66f463c0e80d31bz-1"
+        }
+      ]
     },
     {
       "id": "troximetacin-gel",
@@ -532,8 +637,14 @@
       "closingLine": "Targeted relief that goes straight to the area of discomfort.",
       "image": "/assets/images/troximetacin-gel.jpg",
       "therapy": "Therapy - Orthopedic & Pain Care",
-      "isStore": false,
-      "isWholesale": true
+      "isStore": true,
+      "isWholesale": true,
+      "marketplaces": [
+        {
+          "amazon": "https://www.amazon.ae/dp/B0DHFBB1PH",
+          "noon": "https://www.noon.com/uae-en/product/ZB1CDBA39356435B4D560Z/p/?o=ff932a2286c830fc"
+        }
+      ]
     },
     {
       "id": "breezex",
@@ -553,14 +664,20 @@
       "image": "/assets/images/breezex.jpg",
       "therapy": "Therapy - Orthopedic & Pain Care",
       "isStore": true,
-      "isWholesale": true
+      "isWholesale": true,
+      "marketplaces": [
+        {
+          "amazon": "https://www.amazon.ae/dp/B0HKP1JBBZ",
+          "noon": "https://www.noon.com/uae-en/product/ZBB8C3EFE6BDBA4867C8BZ/p/?o=b0aed89968238cfd"
+        }
+      ]
     },
     {
       "id": "zyflex",
       "name": "Zyflex",
-      "tagline": "Long-lasting patch relief for muscle pain and stiffness",
+      "tagline": "Warm and cold therapy patch for long-lasting relief",
       "composition": "Wintergreen Oil 7%, Menthol 7%, Camphor 7%, Eucalyptus Oil 1%, Clove Oil 1%",
-      "description": "Experience long-lasting relief with Zyflex Patches. Its powerful combination of natural ingredients provides targeted support for backache, joint pain, muscle pain and stiffness for up to 12 hours.",
+      "description": "Experience long-lasting relief with the Zyflex warm and cold therapy patch. Its powerful combination of natural ingredients provides targeted support for backache, joint pain, muscle pain and stiffness for up to 12 hours.",
       "packSize": "9 patches (3 patches × 3 pouches)",
       "availableStrengths": "",
       "category": "Orthopedic & Pain Care",
@@ -573,7 +690,13 @@
       "image": "/assets/images/zyflex.jpg",
       "therapy": "Therapy - Orthopedic & Pain Care",
       "isStore": true,
-      "isWholesale": true
+      "isWholesale": true,
+      "marketplaces": [
+        {
+          "amazon": "https://www.amazon.ae/dp/B0HKNSCVT4",
+          "noon": "https://www.noon.com/uae-en/product/Z5B864AF17DE9D9131510Z/p/?o=f5cb3010670d1fcc"
+        }
+      ]
     },
     {
       "id": "zynatis",
@@ -592,8 +715,19 @@
       "closingLine": "Focused relief, exactly where you need it.",
       "image": "/assets/images/zynatis.jpg",
       "therapy": "Therapy - Orthopedic & Pain Care",
-      "isStore": false,
-      "isWholesale": true
+      "isStore": true,
+      "isWholesale": true,
+      "marketplaces": [
+        {
+          "label": "5 patches",
+          "amazon": "https://www.amazon.ae/dp/B0GZS54DLJ",
+          "noon": "https://www.noon.com/uae-en/product/ZDF98EEB19D274EB5E87AZ/p/?o=f9c863a10b8f642a"
+        },
+        {
+          "label": "10 patches",
+          "amazon": "https://www.amazon.ae/dp/B0H42NX1Y2"
+        }
+      ]
     },
     {
       "id": "zybitel",
@@ -611,7 +745,16 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Dual-action cardiovascular support in one convenient dose.",
       "image": "/assets/images/zybitel-80-5mg.jpg",
-      "images": [{"label": "80/5 mg", "src": "/assets/images/zybitel-80-5mg.jpg"}, {"label": "80/10 mg", "src": "/assets/images/zybitel-80-10mg.jpg"}],
+      "images": [
+        {
+          "label": "80/5 mg",
+          "src": "/assets/images/zybitel-80-5mg.jpg"
+        },
+        {
+          "label": "80/10 mg",
+          "src": "/assets/images/zybitel-80-10mg.jpg"
+        }
+      ],
       "therapy": "Therapy - Cardiovascular",
       "isStore": false,
       "isWholesale": true
@@ -632,7 +775,20 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Two complementary mechanisms for confident glucose management.",
       "image": "/assets/images/vildagard-50-500mg.jpg",
-      "images": [{"label": "50/500 mg", "src": "/assets/images/vildagard-50-500mg.jpg"}, {"label": "50/850 mg", "src": "/assets/images/vildagard-50-850mg.jpg"}, {"label": "50/1000 mg", "src": "/assets/images/vildagard-50-1000mg.jpg"}],
+      "images": [
+        {
+          "label": "50/500 mg",
+          "src": "/assets/images/vildagard-50-500mg.jpg"
+        },
+        {
+          "label": "50/850 mg",
+          "src": "/assets/images/vildagard-50-850mg.jpg"
+        },
+        {
+          "label": "50/1000 mg",
+          "src": "/assets/images/vildagard-50-1000mg.jpg"
+        }
+      ],
       "therapy": "Therapy - Metabolic & Diabetes",
       "isStore": false,
       "isWholesale": true
@@ -653,7 +809,16 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Simple once-daily support for long-term blood-pressure control.",
       "image": "/assets/images/telmijub-40mg.jpg",
-      "images": [{"label": "40 mg", "src": "/assets/images/telmijub-40mg.jpg"}, {"label": "80 mg", "src": "/assets/images/telmijub-80mg.jpg"}],
+      "images": [
+        {
+          "label": "40 mg",
+          "src": "/assets/images/telmijub-40mg.jpg"
+        },
+        {
+          "label": "80 mg",
+          "src": "/assets/images/telmijub-80mg.jpg"
+        }
+      ],
       "therapy": "Therapy - Cardiovascular",
       "isStore": false,
       "isWholesale": true
@@ -752,7 +917,7 @@
       },
       {
         "name": "Zyflex",
-        "use": "Muscle stiffness patch"
+        "use": "Warm and cold therapy patch"
       },
       {
         "name": "Nervease",
@@ -908,5 +1073,9 @@
     "calmi-dormin",
     "calmivenal-gel",
     "troximetacin-gel"
-  ]
+  ],
+  "scientificOffice": {
+    "title": "Scientific Office",
+    "name": "Sevana Pharma"
+  }
 }
