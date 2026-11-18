@@ -221,21 +221,21 @@ export function TherapyTiles({ categories, products, value, onChange }) {
 
 // Compact cards for the first-to-market launches. `items` are { name, use, product? }:
 // ones that match a catalogue product show its photo (whole, at its own proportions)
-// and open its details; the rest are text-only. Staggered columns keep uneven photo
-// heights tidy.
+// and open its details; the rest are text-only. An even grid with one fixed photo
+// frame keeps every card in a row aligned and the same height.
 export function Spotlight({ items, onOpen }) {
-  const cardClass = 'block w-full text-left rounded-xl overflow-hidden bg-white/5 border border-white/10';
+  const cardClass = 'flex h-full w-full flex-col text-left rounded-xl overflow-hidden bg-white/5 border border-white/10';
   return (
-    <Reveal stagger className="columns-2 md:columns-3 lg:columns-4 gap-x-4 [&>*]:mb-4 [&>*]:break-inside-avoid">
+    <Reveal stagger className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-stretch">
       {items.map(({ name, use, product }) => {
         const body = (
           <>
             {product && hasPackShot(product) && (
-              <span className="block relative overflow-hidden">
-                <ProductVisual fill product={product} />
+              <span className="block relative aspect-[4/3] shrink-0 overflow-hidden bg-brand-paper">
+                <ProductVisual frame product={product} />
               </span>
             )}
-            <span className="block p-4">
+            <span className="block flex-1 p-4">
               <span className="block font-display text-lg leading-snug text-brand-paper">{name}</span>
               {use && <span className="block mt-1 text-xs text-brand-onDarkMuted leading-relaxed">{use}</span>}
             </span>
