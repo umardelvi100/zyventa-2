@@ -2,7 +2,6 @@ import { Search, ArrowRight, ArrowUpRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import imageSizes from '@/data/imageSizes.json';
 import { Reveal } from '@/components/Motion';
-import MarketplaceLinks from '@/components/MarketplaceLinks';
 
 const { productBadges } = contentData;
 
@@ -154,7 +153,7 @@ export function ChipGroup({ label, options, value, onChange }) {
 // Therapy-area tiles that double as the main category filter.
 export function TherapyTiles({ categories, products, value, onChange }) {
   return (
-    <Reveal stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+    <Reveal stagger className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
       {categories.map((cat) => {
         const items = products.filter((p) => p.category === cat);
         const style = therapyStyle(cat);
@@ -165,24 +164,24 @@ export function TherapyTiles({ categories, products, value, onChange }) {
             type="button"
             onClick={() => onChange(active ? 'All' : cat)}
             aria-pressed={active}
-            className={`group relative text-left rounded-xl p-6 pb-7 overflow-hidden transition-all duration-300 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green ${
+            className={`group relative text-left rounded-xl p-4 pb-5 overflow-hidden transition-all duration-300 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green ${
               active ? 'ring-2 ring-offset-2 ring-offset-brand-paper' : ''
             }`}
             style={{ background: style.tint, '--tw-ring-color': style.accent }}
           >
-            <div className="flex -space-x-5 h-20">
+            <div className="flex -space-x-4 h-14">
               {[...items].sort((a, b) => hasPackShot(b) - hasPackShot(a)).slice(0, 3).map((p) => (
-                <span key={p.id} className="w-20 h-20 rounded-xl bg-white/70 flex items-center justify-center p-2 border border-white">
+                <span key={p.id} className="w-14 h-14 rounded-lg bg-white/70 flex items-center justify-center p-1.5 border border-white">
                   <ProductVisual product={p} size="thumb" />
                 </span>
               ))}
             </div>
-            <p className="mt-6 font-display text-2xl sm:text-[1.7rem] leading-tight" style={{ color: style.accent }}>{cat}</p>
-            <p className="mt-2 text-sm font-semibold text-ink-60">
+            <p className="mt-4 font-display text-lg leading-tight" style={{ color: style.accent }}>{cat}</p>
+            <p className="mt-1 text-xs font-semibold text-ink-60">
               {items.length} {items.length === 1 ? 'product' : 'products'}
             </p>
             <ArrowUpRight
-              className="absolute top-5 right-5 w-6 h-6 opacity-60 group-hover:opacity-100 transition-opacity"
+              className="absolute top-3 right-3 w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"
               style={{ color: style.accent }}
               aria-hidden="true"
             />
@@ -220,7 +219,7 @@ export function Spotlight({ products, onOpen }) {
   );
 }
 
-export function ProductCard({ product, onOpen, actionLabel, showMarketplaces = false }) {
+export function ProductCard({ product, onOpen, actionLabel }) {
   const highlights = productHighlights(product.id);
   const style = therapyStyle(product.category);
   return (
@@ -261,7 +260,6 @@ export function ProductCard({ product, onOpen, actionLabel, showMarketplaces = f
           </p>
         )}
         <div className="mt-auto pt-6">
-          {showMarketplaces && <MarketplaceLinks product={product} className="mb-6" />}
           <button type="button" onClick={() => onOpen(product)} className="link-accent text-sm">
             {actionLabel} <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </button>

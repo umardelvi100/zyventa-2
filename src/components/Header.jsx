@@ -63,10 +63,10 @@ export default function Header() {
           >
             <img
               src={contentData.site.logo}
-              alt="Zyventa Biocare Drug Store LLC - Creating Healthy Tomorrow"
-              width={1600}
-              height={533}
-              className={`w-auto object-contain mix-blend-multiply transition-[height] duration-300 ${isScrolled ? 'h-12' : 'h-14 sm:h-16'}`}
+              alt="Zyventa"
+              width={271}
+              height={97}
+              className={`w-auto object-contain transition-[height] duration-300 ${isScrolled ? 'h-11' : 'h-12 sm:h-14'}`}
             />
           </Link>
 

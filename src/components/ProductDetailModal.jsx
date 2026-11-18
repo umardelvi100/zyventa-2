@@ -5,9 +5,8 @@ import { X, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { ProductVisual, imageRatio } from '@/components/Catalog';
 import { submitEnquiry, enquiryMailto } from '@/lib/submitEnquiry';
 import contentData from '@/data/zyventaContent.json';
-import MarketplaceLinks from '@/components/MarketplaceLinks';
 
-export default function ProductDetailModal({ product, onClose, showMarketplaces = false }) {
+export default function ProductDetailModal({ product, onClose }) {
   const [showInquiryForm, setShowInquiryForm] = useState(false);
   const [inquirySubmitted, setInquirySubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -122,10 +121,6 @@ export default function ProductDetailModal({ product, onClose, showMarketplaces 
 
             {product.closingLine && (
               <p className="mt-6 font-display text-lg italic text-brand-navy">{product.closingLine}</p>
-            )}
-
-            {showMarketplaces && (
-              <MarketplaceLinks product={product} className="mt-8 pt-6 border-t border-brand-border" />
             )}
 
             {showInquiryForm && (
