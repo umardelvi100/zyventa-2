@@ -240,7 +240,7 @@ export default function HeroSlideshow({ products, onOpen }) {
         {highlights.length > 0 && (
           <span ref={tagsEl} className="pointer-events-none absolute top-4 left-4 z-20 flex flex-wrap items-center gap-1.5">
             {highlights.map((h) => (
-              <span key={h} className={`tag ${h === 'Zyventa brand' ? 'bg-brand-navy text-brand-paper' : 'bg-brand-green text-brand-darkBlue'}`}>{h}</span>
+              <span key={h} className={`tag ${h === 'Zyventa Biocare brand' ? 'bg-brand-navy text-brand-paper' : 'bg-brand-green text-brand-darkBlue'}`}>{h}</span>
             ))}
           </span>
         )}

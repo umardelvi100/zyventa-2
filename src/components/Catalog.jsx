@@ -2,6 +2,7 @@ import { Search, ArrowRight, ArrowUpRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import imageSizes from '@/data/imageSizes.json';
 import { Reveal } from '@/components/Motion';
+import MarketplaceLinks from '@/components/MarketplaceLinks';
 
 const { productBadges } = contentData;
 
@@ -13,7 +14,7 @@ export const THERAPY_STYLES = {
   'Orthopedic & Pain Care': { tint: '#FCEBDA', accent: '#B4561A', short: 'Ortho' },
   'Metabolic & Diabetes': { tint: '#E2F2EC', accent: '#1F7A5C', short: 'Metabolic' },
   'Dermatology': { tint: '#FBE8F0', accent: '#A23B67', short: 'Derma' },
-  'Gastroenterology': { tint: '#E3EEF7', accent: '#1D5F8A', short: 'GI' },
+  'Anorectal Care': { tint: '#E3EEF7', accent: '#1D5F8A', short: 'Anorectal' },
 };
 const DEFAULT_STYLE = { tint: '#EEF1F4', accent: '#334155', short: '' };
 export const therapyStyle = (category) => THERAPY_STYLES[category] || DEFAULT_STYLE;
@@ -90,11 +91,11 @@ export function productHighlights(id) {
   const out = [];
   if (productBadges.firstToMarket.includes(id)) out.push('First to market');
   if (productBadges.firstGeneric.includes(id)) out.push('First generic in UAE');
-  if (productBadges.owned.includes(id)) out.push('Zyventa brand');
+  if (productBadges.owned.includes(id)) out.push('Zyventa Biocare brand');
   return out;
 }
 
-// Shared building blocks for the wholesale range and online store pages.
+// Shared building blocks for the product range and online store pages.
 
 export function SearchField({ value, onChange, placeholder, compact = false }) {
   if (compact) {
@@ -153,7 +154,7 @@ export function ChipGroup({ label, options, value, onChange }) {
 // Therapy-area tiles that double as the main category filter.
 export function TherapyTiles({ categories, products, value, onChange }) {
   return (
-    <Reveal stagger className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+    <Reveal stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
       {categories.map((cat) => {
         const items = products.filter((p) => p.category === cat);
         const style = therapyStyle(cat);
@@ -164,24 +165,24 @@ export function TherapyTiles({ categories, products, value, onChange }) {
             type="button"
             onClick={() => onChange(active ? 'All' : cat)}
             aria-pressed={active}
-            className={`group relative text-left rounded-xl p-4 pb-5 overflow-hidden transition-all duration-300 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green ${
+            className={`group relative text-left rounded-xl p-6 pb-7 overflow-hidden transition-all duration-300 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green ${
               active ? 'ring-2 ring-offset-2 ring-offset-brand-paper' : ''
             }`}
             style={{ background: style.tint, '--tw-ring-color': style.accent }}
           >
-            <div className="flex -space-x-4 h-14">
+            <div className="flex -space-x-5 h-20">
               {[...items].sort((a, b) => hasPackShot(b) - hasPackShot(a)).slice(0, 3).map((p) => (
-                <span key={p.id} className="w-14 h-14 rounded-lg bg-white/70 flex items-center justify-center p-1.5 border border-white">
+                <span key={p.id} className="w-20 h-20 rounded-xl bg-white/70 flex items-center justify-center p-2 border border-white">
                   <ProductVisual product={p} size="thumb" />
                 </span>
               ))}
             </div>
-            <p className="mt-4 font-display text-lg leading-tight" style={{ color: style.accent }}>{cat}</p>
-            <p className="mt-1 text-xs font-semibold text-ink-60">
+            <p className="mt-6 font-display text-2xl sm:text-[1.7rem] leading-tight" style={{ color: style.accent }}>{cat}</p>
+            <p className="mt-2 text-sm font-semibold text-ink-60">
               {items.length} {items.length === 1 ? 'product' : 'products'}
             </p>
             <ArrowUpRight
-              className="absolute top-3 right-3 w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"
+              className="absolute top-5 right-5 w-6 h-6 opacity-60 group-hover:opacity-100 transition-opacity"
               style={{ color: style.accent }}
               aria-hidden="true"
             />
@@ -192,34 +193,48 @@ export function TherapyTiles({ categories, products, value, onChange }) {
   );
 }
 
-// Large featured cards for first-to-market launches.
-export function Spotlight({ products, onOpen }) {
+// Compact cards for the first-to-market launches. `items` are { name, use, product? }:
+// ones that match a catalogue product show its photo (whole, at its own proportions)
+// and open its details; the rest are text-only. Staggered columns keep uneven photo
+// heights tidy.
+export function Spotlight({ items, onOpen }) {
+  const cardClass = 'block w-full text-left rounded-xl overflow-hidden bg-white/5 border border-white/10';
   return (
-    <Reveal stagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 items-start">
-      {products.map((p) => {
-        return (
+    <Reveal stagger className="columns-2 md:columns-3 lg:columns-4 gap-x-4 [&>*]:mb-4 [&>*]:break-inside-avoid">
+      {items.map(({ name, use, product }) => {
+        const body = (
+          <>
+            {product && hasPackShot(product) && (
+              <span className="block relative overflow-hidden">
+                <ProductVisual fill product={product} />
+              </span>
+            )}
+            <span className="block p-4">
+              <span className="block font-display text-lg leading-snug text-brand-paper">{name}</span>
+              {use && <span className="block mt-1 text-xs text-brand-onDarkMuted leading-relaxed">{use}</span>}
+            </span>
+          </>
+        );
+        return product ? (
           <button
-            key={p.id}
+            key={name}
             type="button"
-            onClick={() => onOpen(p)}
-            className="group text-left rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-brand-green transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green"
+            onClick={() => onOpen(product)}
+            className={`group ${cardClass} hover:border-brand-green transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green`}
           >
-            <span className="block relative overflow-hidden">
-              <ProductVisual fill product={p} />
-            </span>
-            <span className="block p-5">
-              <span className="block text-[11px] font-bold uppercase tracking-[0.16em] text-brand-green">{p.category}</span>
-              <span className="block mt-2 font-display text-2xl text-brand-paper">{p.name}</span>
-              {p.tagline && <span className="block mt-1 text-sm text-brand-onDarkMuted line-clamp-2">{p.tagline}</span>}
-            </span>
+            {body}
           </button>
+        ) : (
+          <div key={name} className={cardClass}>
+            {body}
+          </div>
         );
       })}
     </Reveal>
   );
 }
 
-export function ProductCard({ product, onOpen, actionLabel }) {
+export function ProductCard({ product, onOpen, actionLabel, showMarketplaces = false }) {
   const highlights = productHighlights(product.id);
   const style = therapyStyle(product.category);
   return (
@@ -234,7 +249,7 @@ export function ProductCard({ product, onOpen, actionLabel }) {
         {highlights.length > 0 && (
           <span className="absolute top-3 left-3 flex flex-col items-start gap-1">
             {highlights.map((h) => (
-              <span key={h} className={`tag ${h === 'Zyventa brand' ? 'bg-brand-navy text-brand-paper' : 'bg-brand-green text-brand-darkBlue'}`}>{h}</span>
+              <span key={h} className={`tag ${h === 'Zyventa Biocare brand' ? 'bg-brand-navy text-brand-paper' : 'bg-brand-green text-brand-darkBlue'}`}>{h}</span>
             ))}
           </span>
         )}
@@ -260,6 +275,7 @@ export function ProductCard({ product, onOpen, actionLabel }) {
           </p>
         )}
         <div className="mt-auto pt-6">
+          {showMarketplaces && <MarketplaceLinks product={product} className="mb-6" />}
           <button type="button" onClick={() => onOpen(product)} className="link-accent text-sm">
             {actionLabel} <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </button>

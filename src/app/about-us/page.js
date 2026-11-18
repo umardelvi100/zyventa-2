@@ -5,8 +5,8 @@ import PageHeader from '@/components/PageHeader';
 import { Reveal } from '@/components/Motion';
 
 export const metadata = {
-  title: 'About Us - Zyventa',
-  description: 'ZYVENTA is the connection between your brand and the region’s best medical professionals, primary health centres, hospitals and pharmacies.',
+  title: 'About Us - Zyventa Biocare',
+  description: 'Zyventa Biocare is the connection between your brand and the region’s best medical professionals, primary health centres, hospitals and pharmacies.',
 };
 
 const PRINCIPLES = [
@@ -17,8 +17,8 @@ const PRINCIPLES = [
 export default function AboutUsPage() {
   return (
     <div>
-      <PageHeader eyebrow="About Zyventa" title={<>One partner for <em>regional</em> healthcare.</>}>
-        ZYVENTA is the connection between your brand and the region&apos;s best medical professionals, primary health centres, hospitals and pharmacies.
+      <PageHeader eyebrow="About Zyventa Biocare" title={<>One partner for <em>regional</em> healthcare.</>}>
+        Zyventa Biocare is the connection between your brand and the region&apos;s best medical professionals, primary health centres, hospitals and pharmacies.
       </PageHeader>
 
       {/* Overview */}
@@ -36,7 +36,7 @@ export default function AboutUsPage() {
                 src="/assets/images/recreated/about-healthcare-team.jpg"
                 width={1448}
                 height={1086}
-                alt="Zyventa healthcare team"
+                alt="Zyventa Biocare healthcare team"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -87,6 +87,10 @@ export default function AboutUsPage() {
                 </li>
               ))}
             </ul>
+            <div>
+              <p className="eyebrow !text-brand-green">{contentData.scientificOffice.heading}</p>
+              <p className="mt-5 font-display text-3xl sm:text-4xl leading-tight">{contentData.scientificOffice.name}</p>
+            </div>
             <div className="border-t border-white/15 pt-6">
               <p className="text-sm font-bold text-brand-green">{contentData.drugStore.approval}</p>
               <p className="mt-2 text-lg leading-relaxed">{contentData.drugStore.role}</p>

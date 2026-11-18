@@ -6,7 +6,7 @@ import HomeCta from '@/components/HomeCta';
 import { Reveal } from '@/components/Motion';
 
 export const metadata = {
-  title: 'Services - Zyventa',
+  title: 'Services - Zyventa Biocare',
   description: 'Business development, regulatory, marketing, sales and distribution services for healthcare brands across the GCC, Middle East and North Africa.',
 };
 
@@ -88,19 +88,13 @@ export default function ServicesPage() {
               <h3 className="display mt-3 text-2xl sm:text-3xl">From manufacturer to <em>patient</em>.</h3>
             </div>
             <p className="lg:col-span-7 text-base sm:text-lg text-ink-80 leading-relaxed">
-              Trademarks are owned by Zyventa, or by another marketing authorisation holder with Zyventa holding distribution rights. Our field teams work with doctors to build prescriptions across hospitals and pharmacies.
+              Trademarks are owned by Zyventa Biocare, or by another marketing authorisation holder with Zyventa Biocare holding distribution rights.
             </p>
           </Reveal>
         </div>
       </section>
 
-      <HomeCta
-        eyebrow="Wholesale"
-        title="Bulk supply at wholesale rates,"
-        accent="across the UAE and GCC."
-        primary={{ href: '/our-range-products', label: 'View wholesale range' }}
-        secondary={{ href: '/contact-us', label: 'Contact us' }}
-      />
+      <HomeCta />
     </div>
   );
 }

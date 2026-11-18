@@ -3,8 +3,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'Medicine Supplier | Online Store | Zyventa Pharmacy in UAE',
-  description: 'ZYVENTA was founded to serve as a link between international healthcare companies and the growing markets of Arabian Gulf and the Middle East.',
+  title: 'Medicine Supplier | Online Store | Zyventa Biocare Pharmacy in UAE',
+  description: 'Zyventa Biocare was founded to serve as a link between international healthcare companies and the growing markets of Arabian Gulf and the Middle East.',
   icons: {
     icon: '/assets/logos/cropped-zyventa-logo-png1.png',
   },

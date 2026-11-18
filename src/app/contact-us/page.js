@@ -88,7 +88,7 @@ export default function ContactUsPage() {
                 <CheckCircle2 className="w-10 h-10 text-brand-green" />
                 <p className="mt-4 font-display text-3xl text-brand-navy">Message sent.</p>
                 <p className="mt-2 text-ink-80 max-w-md">
-                  Thank you for contacting Zyventa. We have received your message and will be in touch shortly.
+                  Thank you for contacting Zyventa Biocare. We have received your message and will be in touch shortly.
                 </p>
                 <button
                   type="button"
@@ -122,14 +122,13 @@ export default function ContactUsPage() {
                     {contentData.partnerModels.map((m) => (
                       <option key={m.id} value={m.title}>{m.title}</option>
                     ))}
-                    <option value="Wholesale Bulk Rates">Wholesale bulk purchase</option>
                     <option value="Regulatory Support">Regulatory support</option>
                     <option value="Careers">Careers</option>
                   </select>
                 </label>
                 <label className="sm:col-span-2">
                   <span className="field-label">Message *</span>
-                  <textarea required rows="5" placeholder="How can Zyventa help your organisation?" value={formData.message} onChange={update('message')} className="field" />
+                  <textarea required rows="5" placeholder="How can Zyventa Biocare help your organisation?" value={formData.message} onChange={update('message')} className="field" />
                 </label>
                 <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
                 <div className="sm:col-span-2">
@@ -151,7 +150,7 @@ export default function ContactUsPage() {
 
       <section className="h-96 w-full bg-brand-sand">
         <iframe
-          title="Zyventa office location, Al Mamzar, Dubai"
+          title="Zyventa Biocare office location, Al Mamzar, Dubai"
           src="https://maps.google.com/maps?q=Omniyat+Building+Al+Mamzar+Dubai&t=&z=14&ie=UTF8&iwloc=&output=embed"
           className="w-full h-full border-0 grayscale-[60%] sepia-[15%]"
           loading="lazy"

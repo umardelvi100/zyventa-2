@@ -17,7 +17,7 @@ const NAV_LINKS = [
 ];
 
 const PRODUCT_LINKS = [
-  { href: '/our-range-products', label: 'Our range', description: 'Wholesale rates for bulk medicine purchases', Icon: Truck },
+  { href: '/our-range-products', label: 'Our range', description: 'Branded pharmaceuticals, generics and OTC products', Icon: Truck },
   { href: '/online-store', label: 'Online store', description: 'Consumer healthcare, derma and CNS products', Icon: Layers },
 ];
 
@@ -59,14 +59,14 @@ export default function Header() {
           <Link
             href="/"
             className="flex items-center rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green"
-            aria-label="Zyventa home"
+            aria-label="Zyventa Biocare home"
           >
             <img
               src={contentData.site.logo}
-              alt="Zyventa"
-              width={271}
-              height={97}
-              className={`w-auto object-contain transition-[height] duration-300 ${isScrolled ? 'h-11' : 'h-12 sm:h-14'}`}
+              alt="Zyventa Biocare Drug Store LLC - Creating Healthy Tomorrow"
+              width={1200}
+              height={213}
+              className={`w-auto object-contain transition-[height] duration-300 ${isScrolled ? 'h-9 sm:h-10 lg:h-11' : 'h-9 sm:h-11 lg:h-12'}`}
             />
           </Link>
 

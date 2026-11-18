@@ -33,11 +33,13 @@ export default function Footer() {
           
           {/* Brand Info & Address (Col 1 - 4 cols) */}
           <div className="lg:col-span-4 space-y-6">
-            <Link href="/" className="inline-block" aria-label="Zyventa Home">
+            <Link href="/" className="inline-block" aria-label="Zyventa Biocare Home">
               <img
-                src={contentData.site.logo}
-                alt="Zyventa"
-                className="h-12 w-auto object-contain brightness-0 invert"
+                src={contentData.site.logoWhite}
+                alt="Zyventa Biocare Drug Store LLC - Creating Healthy Tomorrow"
+                width={1200}
+                height={213}
+                className="h-12 w-auto object-contain"
               />
             </Link>
 
@@ -139,7 +141,7 @@ export default function Footer() {
               <ul className="space-y-3 text-sm text-slate-300">
                 <li>
                   <Link href="/our-range-products" className="hover:text-brand-green transition-colors">
-                    Wholesale Products
+                    Our Range
                   </Link>
                 </li>
                 <li>
@@ -230,7 +232,7 @@ export default function Footer() {
       <div className="border-t border-white/10 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
-            © {new Date().getFullYear()} Zyventa. All rights reserved.
+            © {new Date().getFullYear()} Zyventa Biocare. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
             <Link href="/faq" className="hover:text-white transition-colors">

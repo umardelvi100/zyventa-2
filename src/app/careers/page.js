@@ -4,8 +4,8 @@ import PageHeader from '@/components/PageHeader';
 import { Reveal } from '@/components/Motion';
 
 export const metadata = {
-  title: 'Careers - Zyventa',
-  description: 'Send your CV to Zyventa and join a team connecting global healthcare brands with the Middle East and North Africa.',
+  title: 'Careers - Zyventa Biocare',
+  description: 'Send your CV to Zyventa Biocare and join a team connecting global healthcare brands with the Middle East and North Africa.',
 };
 
 const AREAS = ['Pharmaceutical sales', 'Marketing', 'Regulatory affairs', 'Distribution', 'Business development'];
@@ -14,12 +14,12 @@ export default function CareersPage() {
   // NOTE: no dedicated recruitment address exists in the project; the company
   // contact address is used. Confirm or replace it here if HR has its own.
   const email = contentData.site.email;
-  const subject = encodeURIComponent('Career Application — Zyventa');
+  const subject = encodeURIComponent('Career Application — Zyventa Biocare');
   const mailto = `mailto:${email}?subject=${subject}`;
 
   return (
     <div>
-      <PageHeader eyebrow="Careers" title={<>Join the team <em>behind</em> Zyventa.</>}>
+      <PageHeader eyebrow="Careers" title={<>Join the team <em>behind</em> Zyventa Biocare.</>}>
         We are always glad to hear from capable people. Share your CV and we will be in touch when there is a fit.
       </PageHeader>
 

@@ -7,16 +7,8 @@ export default function PartnersMarquee() {
   return (
     <section id="our-partners" className="bg-brand-paper py-20 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="grid lg:grid-cols-12 gap-8 items-end">
-          <div className="lg:col-span-7">
-            <p className="eyebrow">Partners</p>
-            <h2 className="display mt-4 text-3xl sm:text-4xl">Principals from eight countries.</h2>
-          </div>
-          <ul className="lg:col-span-5 flex flex-wrap gap-2 lg:justify-end" aria-label="Principal countries">
-            {contentData.principalCountries.map((country) => (
-              <li key={country} className="tag tag-neutral !text-xs !px-3 !py-1.5">{country}</li>
-            ))}
-          </ul>
+        <Reveal>
+          <p className="eyebrow">Partners</p>
         </Reveal>
         <Reveal as="ul" stagger className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 border-t border-l border-brand-navy/15">
           {contentData.partners.map((partner) => (
@@ -38,6 +30,8 @@ export default function PartnersMarquee() {
               )}
             </li>
           ))}
+          {/* Spans enough columns that the last row is always full at every width
+              (26 logos + this tile: 2-col, 3-col, 4-col and 7-col grids all divide evenly) */}
           <li className="h-28 sm:h-32 col-span-2 sm:col-span-1 md:col-span-2 border-b border-r border-brand-navy/15">
             <Link
               href="/contact-us?type=distribution"

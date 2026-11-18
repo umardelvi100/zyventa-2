@@ -24,62 +24,48 @@ export default function Hero() {
 
   return (
     <section id="hero" className="bg-brand-paper pt-20">
-      {/* Headline split: statement left, navy quote panel right */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-12 border-b border-brand-border">
-          <div className="lg:col-span-8 py-14 sm:py-20 lg:pr-14 reveal">
-            <p className="eyebrow">Healthcare market entry · GCC, Middle East &amp; North Africa</p>
-            <h1 className="display mt-6 text-[2.6rem] sm:text-6xl lg:text-[4.6rem]">
-              Creating a <em>healthy</em> tomorrow, across the Middle East &amp; North&nbsp;Africa.
-            </h1>
-            <p className="mt-7 max-w-xl text-lg text-ink-80 leading-relaxed">
-              We connect global pharmaceutical and biotechnology companies with the patients who need them, from registration to the pharmacy shelf.
-            </p>
-            <div className="mt-9 flex flex-wrap items-center gap-6">
-              <Link href="/contact-us" className="btn btn-accent">
-                Partner with us <ArrowRight className="w-4 h-4" aria-hidden="true" />
-              </Link>
-              <Link href="/services" className="link-accent">
-                See what we do <ArrowRight className="w-4 h-4" aria-hidden="true" />
-              </Link>
+      {/* Headline over the photo: statement on the faded left, pharmacy photo on the right */}
+      <div className="relative isolate overflow-hidden">
+        <img
+          src="/assets/images/hero-pharmacy-shelf.webp"
+          alt=""
+          width={1672}
+          height={941}
+          className="hidden lg:block absolute inset-y-0 right-0 -z-10 w-[76%] h-full object-cover object-right"
+          style={{ maskImage: 'linear-gradient(to right, transparent 0%, transparent 14%, #000 42%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, transparent 14%, #000 42%)' }}
+          aria-hidden="true"
+        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:min-h-[34rem] flex items-center">
+            <div className="py-14 sm:py-20 lg:max-w-[46%] reveal">
+              <h1 className="display max-w-[26rem] sm:max-w-none lg:max-w-[26rem] text-[2.6rem] sm:text-6xl lg:text-[3rem]">
+                Your partner in creating a <em>healthier</em> tomorrow.
+              </h1>
+              <p className="mt-7 max-w-[27rem] text-lg text-ink-80 leading-relaxed">
+                We connect global pharmaceutical and biotechnology companies with the patients who need them, from registration to the pharmacy shelf.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center gap-6">
+                <Link href="/contact-us" className="btn btn-accent">
+                  Partner with us <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Link>
+                <Link href="/services" className="link-accent">
+                  See what we do <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Link>
+              </div>
             </div>
           </div>
-
-          <aside
-            className="lg:col-span-4 bg-brand-navy text-brand-paper p-6 sm:p-8 flex flex-col justify-between gap-8 reveal"
-            style={{ animationDelay: '.1s' }}
-          >
-            <figure className="relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:flex-1 lg:min-h-[15rem] w-full overflow-hidden rounded-md bg-brand-darkBlue">
-              <img
-                src="/assets/images/recreated/services-regulation.jpg"
-                alt="Healthcare professional handing medication to a patient across a pharmacy counter"
-                width={1448}
-                height={1086}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <span className="absolute left-0 bottom-0 h-1 w-16 bg-brand-green" aria-hidden="true" />
-            </figure>
-            <div>
-              <p className="font-display text-2xl sm:text-[1.7rem] leading-snug">
-                From registration to the pharmacy shelf, handled in-house.
-              </p>
-              <p className="mt-6 text-sm text-brand-onDarkMuted">Five divisions · one partner</p>
-              <ul className="mt-5 flex flex-wrap gap-2">
-                {contentData.distributionDivisions.map((div) => (
-                  <li key={div.id}>
-                    <Link
-                      href={`/services#${div.id}`}
-                      className="inline-block text-xs font-semibold px-3 py-1.5 rounded-full border border-white/20 hover:border-brand-green hover:text-brand-green transition-colors"
-                    >
-                      {div.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </aside>
         </div>
+        {/* Photo below the text on tablet and phone */}
+        <img
+          src="/assets/images/hero-pharmacy-shelf.webp"
+          alt="Zyventa Biocare pharmacists beside a shelf of Zyventa Biocare products in a Dubai distribution centre"
+          width={1672}
+          height={941}
+          className="lg:hidden block w-full h-auto"
+        />
+      </div>
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Key figures */}
         <dl className="mt-8 grid grid-cols-2 lg:grid-cols-4 bg-brand-navy text-white rounded-md overflow-hidden">
           {contentData.stats.map((stat, i) => (
@@ -88,9 +74,14 @@ export default function Hero() {
               className={`py-8 sm:py-10 px-6 border-white/15 ${i % 2 === 1 ? 'border-l' : ''} ${i === 2 ? 'lg:border-l' : ''} ${i >= 2 ? 'border-t lg:border-t-0' : ''}`}
             >
               <dt className="sr-only">{stat.label}</dt>
-              <dd className="font-display text-4xl sm:text-5xl text-white">
-                <CountUp value={stat.value} /><span className="text-brand-green">{stat.suffix}</span>
-              </dd>
+              {stat.display ? (
+                // A word instead of a figure (e.g. "Worldwide"), in the accent colour.
+                <dd className="font-display text-4xl sm:text-5xl text-brand-green">{stat.display}</dd>
+              ) : (
+                <dd className="font-display text-4xl sm:text-5xl text-white">
+                  <CountUp value={stat.value} /><span className="text-brand-green">{stat.suffix}</span>
+                </dd>
+              )}
               <dd className="mt-2 text-sm font-semibold text-white">{stat.label}</dd>
               <dd className="mt-1 text-xs sm:text-sm text-brand-onDarkMuted leading-relaxed">{stat.description}</dd>
             </div>
@@ -108,7 +99,7 @@ export default function Hero() {
               playsInline
               preload="metadata"
               poster="/assets/images/connected-logistics-and-supply-chain-concept-table-tennis-ball-with-plane-trucks-train-and-ship-s-300x200.jpg"
-              aria-label="Zyventa company film"
+              aria-label="Zyventa Biocare company film"
               className="absolute inset-0 w-full h-full object-cover"
             >
               <source src={contentData.site.videoSrc} type="video/mp4" />
@@ -123,7 +114,6 @@ export default function Hero() {
               <span>{isPlaying ? 'Pause' : 'Play'}</span>
             </button>
           </div>
-          <figcaption className="mt-3 text-xs text-ink-60">Zyventa company film</figcaption>
         </figure>
       </div>
       <div className="h-16 sm:h-24" />

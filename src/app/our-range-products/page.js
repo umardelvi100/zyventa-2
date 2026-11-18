@@ -2,7 +2,7 @@
 
 import { useState, useRef } from 'react';
 import Link from 'next/link';
-import { ArrowRight, ArrowDown, X } from 'lucide-react';
+import { ArrowDown, X } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import ProductDetailModal from '@/components/ProductDetailModal';
 import HomeCta from '@/components/HomeCta';
@@ -18,8 +18,6 @@ const RX_OPTIONS = [
   { value: 'Rx', label: 'Prescription' },
   { value: 'OTC', label: 'OTC' },
 ];
-
-const SPOTLIGHT_IDS = ['troximetacin-gel', 'calmivenal-gel', 'nourisil-md'];
 
 export default function OurRangeProductsPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -38,6 +36,13 @@ export default function OurRangeProductsPage() {
     ...byId(firstToMarket),
     ...products.filter((p) => !firstToMarket.includes(p.id)),
   ].filter(hasPackShot);
+
+  // Spotlight: the same first-to-market launches the Home page lists, each linked to its
+  // catalogue product when there is one.
+  const spotlightItems = contentData.firstToMarket.regionFirsts.map((launch) => ({
+    ...launch,
+    product: products.find((p) => p.name.toLowerCase().startsWith(launch.name.toLowerCase())),
+  }));
 
   const filteredProducts = products.filter((p) => {
     const searchLower = searchTerm.toLowerCase();
@@ -91,19 +96,19 @@ export default function OurRangeProductsPage() {
         />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24 grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           <div className="lg:col-span-5 reveal">
-            <p className="eyebrow !text-brand-green">Wholesale catalogue</p>
+            <p className="eyebrow !text-brand-green">Product catalogue</p>
             <h1 className="display !text-brand-paper mt-6 text-5xl sm:text-6xl xl:text-7xl">
               Our <em>range</em> of products.
             </h1>
             <p className="mt-6 max-w-md text-lg text-brand-onDarkMuted leading-relaxed">
-              Branded pharmaceuticals, generics, nutraceuticals and OTC products at competitive wholesale rates for pharmacies, clinics and hospitals.
+              Branded pharmaceuticals, generics, nutraceuticals and OTC products for pharmacies, clinics and hospitals.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <button type="button" onClick={() => pickArea('All')} className="btn btn-accent">
                 Browse catalogue <ArrowDown className="w-4 h-4" aria-hidden="true" />
               </button>
               <Link href="/contact-us?type=distribution" className="btn btn-on-dark">
-                Request wholesale pricing
+                Request pricing
               </Link>
             </div>
             <dl className="mt-12 grid grid-cols-3 max-w-md rounded-xl bg-white/[0.06] ring-1 ring-white/10 backdrop-blur-sm divide-x divide-white/10">
@@ -124,12 +129,9 @@ export default function OurRangeProductsPage() {
       {/* Therapy areas */}
       <section className="bg-brand-paper py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="eyebrow">Therapy areas</p>
-              <h2 className="display mt-4 text-3xl sm:text-4xl">Browse by <em>therapy area</em>.</h2>
-            </div>
-            <p className="text-sm text-ink-60">Select an area to filter the catalogue.</p>
+          <div>
+            <p className="eyebrow">Therapy areas</p>
+            <h2 className="display mt-4 text-3xl sm:text-4xl">Browse by <em>therapy area</em>.</h2>
           </div>
           <div className="mt-10">
             <TherapyTiles categories={therapyAreas} products={products} value={selectedCategory} onChange={pickArea} />
@@ -140,17 +142,12 @@ export default function OurRangeProductsPage() {
       {/* First-to-market spotlight */}
       <section className="bg-brand-darkBlue py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="eyebrow !text-brand-green">Spotlight</p>
-              <h2 className="display !text-brand-paper mt-4 text-3xl sm:text-4xl">First to market in the UAE, Oman and <em>KSA</em>.</h2>
-            </div>
-            <Link href="/#track-record" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-paper hover:text-brand-green transition-colors">
-              Our track record <ArrowRight className="w-4 h-4" aria-hidden="true" />
-            </Link>
+          <div>
+            <p className="eyebrow !text-brand-green">Spotlight</p>
+            <h2 className="display !text-brand-paper mt-4 text-3xl sm:text-4xl">First to market in the UAE, Oman and <em>KSA</em>.</h2>
           </div>
           <div className="mt-10">
-            <Spotlight products={byId(SPOTLIGHT_IDS)} onOpen={setActiveProductModal} />
+            <Spotlight items={spotlightItems} onOpen={setActiveProductModal} />
           </div>
         </div>
       </section>
@@ -194,7 +191,7 @@ export default function OurRangeProductsPage() {
                   key={product.id}
                   product={product}
                   onOpen={setActiveProductModal}
-                  actionLabel="Request wholesale quote"
+                  actionLabel="Request a quote"
                 />
               ))}
             </ProductGrid>
@@ -205,8 +202,8 @@ export default function OurRangeProductsPage() {
       </section>
 
       <HomeCta
-        eyebrow="Wholesale"
-        title="Need bulk supply for your pharmacy or clinic?"
+        eyebrow="Enquiries"
+        title="Need supply for your pharmacy or clinic?"
         accent="Ask for a quote."
         primary={{ href: '/contact-us?type=distribution', label: 'Request pricing' }}
         secondary={{ href: '/online-store', label: 'Online store' }}

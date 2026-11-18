@@ -11,7 +11,7 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }) {
   const blog = contentData.blogs.find((b) => b.slug === params.slug);
-  return blog ? { title: `${blog.title} - Zyventa`, description: blog.excerpt } : {};
+  return blog ? { title: `${blog.title} - Zyventa Biocare`, description: blog.excerpt } : {};
 }
 
 export default function SingleBlogPage({ params }) {
@@ -62,9 +62,9 @@ export default function SingleBlogPage({ params }) {
             &ldquo;We serve as a link between international healthcare companies and GCC and the growing markets of the Middle East.&rdquo;
           </blockquote>
 
-          <h2 className="display text-3xl pt-4">Zyventa, the medicine distributor and online seller</h2>
+          <h2 className="display text-3xl pt-4">Zyventa Biocare, the medicine distributor and online seller</h2>
           <p>
-            At ZYVENTA, we pride ourselves on our comprehensive approach to establishing and enhancing brand presence within the region&apos;s dynamic healthcare landscape. Our dedicated team oversees every phase and process necessary to cultivate a strong brand identity and market presence.
+            At Zyventa Biocare, we pride ourselves on our comprehensive approach to establishing and enhancing brand presence within the region&apos;s dynamic healthcare landscape. Our dedicated team oversees every phase and process necessary to cultivate a strong brand identity and market presence.
           </p>
         </div>
       </article>

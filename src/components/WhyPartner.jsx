@@ -3,14 +3,14 @@ import { ArrowRight } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import { Reveal } from '@/components/Motion';
 
-// Why global brands partner with Zyventa, and the three partnership models.
+// Why global brands partner with Zyventa Biocare, and the three partnership models.
 export default function WhyPartner() {
   return (
     <section id="why-zyventa" className="bg-brand-navy text-white py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal className="grid lg:grid-cols-12 gap-8 items-end">
           <div className="lg:col-span-7">
-            <p className="eyebrow !text-brand-green">Why Zyventa</p>
+            <p className="eyebrow !text-brand-green">Why Zyventa Biocare</p>
             <h2 className="display !text-white mt-4 text-3xl sm:text-5xl">Why global brands <em>partner</em> with us.</h2>
           </div>
           <p className="lg:col-span-5 text-lg text-brand-onDarkMuted leading-relaxed">

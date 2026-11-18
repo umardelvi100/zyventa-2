@@ -5,8 +5,8 @@ import PageHeader from '@/components/PageHeader';
 import { Reveal } from '@/components/Motion';
 
 export const metadata = {
-  title: 'Blog - Zyventa',
-  description: 'Stay updated with pharmaceutical distribution insights, healthcare regulations, and regional market trends from Zyventa.',
+  title: 'Blog - Zyventa Biocare',
+  description: 'Stay updated with pharmaceutical distribution insights, healthcare regulations, and regional market trends from Zyventa Biocare.',
 };
 
 const COVER = '/assets/images/connected-logistics-and-supply-chain-concept-table-tennis-ball-with-plane-trucks-train-and-ship-s-300x200.jpg';

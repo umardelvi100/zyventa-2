@@ -1,15 +1,16 @@
 {
   "site": {
-    "name": "Zyventa",
+    "name": "Zyventa Biocare",
     "tagline": "CREATING A HEALTHY TOMORROW",
-    "heroHeadline": "ZYVENTA: Your MENA healthcare bridge!",
+    "heroHeadline": "Zyventa Biocare: Your MENA healthcare bridge!",
     "heroSubheadline": "We provide world-class support to those who want to enter the most promising markets of Middle East & North Africa, with the help of the most dynamic management team. We recognize that our team is what makes us who we are.",
     "videoSrc": "/assets/videos/Zyventa-Promo-Landscape-V3.mp4",
-    "logo": "/assets/logos/cropped-zyventa-logo-png1.png",
+    "logo": "/assets/logos/zyventa-biocare-logo.png",
+    "logoWhite": "/assets/logos/zyventa-biocare-logo-white.png",
     "email": "contact@zyventa.com",
     "address": "Office No. 323, 3rd Floor, Al Rehan Block, Omniyat Building, Al Mamzar, Dubai, UAE",
-    "aboutText": "ZYVENTA was founded to serve as a link between international healthcare companies and the growing markets of Arabian Gulf and the Middle East. ZYVENTA bridges access gaps by partnering with global pharmaceutical and biotechnology companies to deploy and commercialize new pharmaceutical, biologics, and other healthcare solutions in the Middle East and North Africa (MENA) markets.",
-    "aboutSubtext": "At ZYVENTA, we pride ourselves on our comprehensive approach to establishing and enhancing brand presence within the region's dynamic healthcare landscape. Our dedicated team oversees every phase and process necessary to cultivate a strong brand identity and market presence. With meticulous attention to detail, we integrate five essential divisions: Business Development, Regulation, Marketing, Sales and Distribution.",
+    "aboutText": "Zyventa Biocare was founded to serve as a link between international healthcare companies and the growing markets of Arabian Gulf and the Middle East. Zyventa Biocare bridges access gaps by partnering with global pharmaceutical and biotechnology companies to deploy and commercialize new pharmaceutical, biologics, and other healthcare solutions in the Middle East and North Africa (MENA) markets.",
+    "aboutSubtext": "At Zyventa Biocare, we pride ourselves on our comprehensive approach to establishing and enhancing brand presence within the region's dynamic healthcare landscape. Our dedicated team oversees every phase and process necessary to cultivate a strong brand identity and market presence. With meticulous attention to detail, we integrate five essential divisions: Business Development, Regulation, Marketing, Sales and Distribution.",
     "mission": "To be the preferred regional partner for pharma companies entering MENA, and to develop our own branded products that improve patients’ health and quality of life.",
     "vision": "A specialty firm introducing innovative products that meet unmet medical needs across MENA.",
     "footerDescription": "We serve as a link between international healthcare companies and GCC and the growing markets of the Middle East.",
@@ -26,9 +27,9 @@
   },
   "stats": [
     {
-      "value": "29",
+      "value": "46",
       "suffix": "",
-      "label": "Products, 46 SKUs",
+      "label": "Products",
       "description": "Up from 6 products in FY 2022"
     },
     {
@@ -38,10 +39,11 @@
       "description": "UAE, Saudi Arabia, Oman, Bahrain and Qatar"
     },
     {
-      "value": "8",
+      "value": "",
+      "display": "Worldwide",
       "suffix": "",
-      "label": "Principal countries",
-      "description": "Partners from the USA, UK, Europe, India and the GCC"
+      "label": "Worldwide Principal Partners",
+      "description": "USA, UK, Europe, India, GCC, etc."
     },
     {
       "value": "20",
@@ -106,11 +108,10 @@
     {
       "id": "distribution",
       "name": "Distribution",
-      "title": "Seamless Wholesale & Pharmacy Distribution",
-      "description": "Distribution of pharmaceuticals, nutraceuticals and OTC products to hospitals, pharmacies and wholesalers.",
+      "title": "Seamless Pharmacy Distribution",
+      "description": "Distribution of pharmaceuticals, nutraceuticals and OTC products to hospitals and pharmacies.",
       "points": [
         "Full coverage of UAE and GCC pharmacy chains and independent retailers",
-        "Affordable wholesale rates for bulk medicine purchases",
         "Direct-to-hospital and government tenders fulfillment",
         "Robust stock availability and reliable order delivery"
       ],
@@ -135,18 +136,13 @@
     },
     {
       "title": "Pharmaceutical Distribution",
-      "description": "Seamless wholesale and retail distribution of prescription medications and healthcare items.",
+      "description": "Seamless distribution of prescription medications and healthcare items.",
       "icon": "Truck"
     },
     {
       "title": "Online Store & E-Commerce",
       "description": "Direct-to-consumer and B2B online pharmaceutical store offering certified wellness products.",
       "icon": "ShoppingCart"
-    },
-    {
-      "title": "Bulk Wholesale Medicine",
-      "description": "Competitive wholesale rates for hospitals, clinics, and bulk medicine buyers.",
-      "icon": "Package"
     },
     {
       "title": "Business Development",
@@ -162,7 +158,8 @@
     },
     {
       "name": "Pure Pharmaceuticals",
-      "logo": "/assets/logos/partners/pure-pharmaceuticals.png"
+      "logo": "/assets/logos/partners/pure-pharmaceuticals.png",
+      "country": "UAE"
     },
     {
       "name": "Pharma Bavaria International",
@@ -196,7 +193,8 @@
     },
     {
       "name": "Akses Swiss",
-      "logo": "/assets/logos/partners/akses-swiss.png"
+      "logo": "/assets/logos/partners/akses-swiss.png",
+      "country": "Lithuania"
     },
     {
       "name": "Liquidsun",
@@ -215,16 +213,18 @@
     },
     {
       "name": "Unexo Life Sciences",
-      "logo": "/assets/logos/partners/unexo-life-sciences.png"
+      "logo": "/assets/logos/partners/unexo-life-sciences.png",
+      "country": "India"
     },
     {
       "name": "Incepta",
-      "logo": "/assets/logos/partners/incepta.png"
+      "logo": "/assets/logos/partners/incepta.png",
+      "country": "Bangladesh"
     },
     {
       "name": "Amdis",
       "logo": "/assets/logos/partners/amdis.png",
-      "country": "India"
+      "country": "UAE"
     },
     {
       "name": "Al Yari Pharmacy",
@@ -238,11 +238,13 @@
     },
     {
       "name": "Pharmasol",
-      "logo": "/assets/logos/partners/pharmasol.png"
+      "logo": "/assets/logos/partners/pharmasol.png",
+      "country": "UAE"
     },
     {
       "name": "Lab Botanic Bavaria",
-      "logo": "/assets/logos/partners/lab-botanic-bavaria.png"
+      "logo": "/assets/logos/partners/lab-botanic-bavaria.png",
+      "country": "Germany"
     },
     {
       "name": "Akriti",
@@ -260,11 +262,6 @@
       "country": "Bulgaria"
     },
     {
-      "name": "Metromed",
-      "logo": "/assets/logos/partners/metromed.png",
-      "country": "UAE"
-    },
-    {
       "name": "Menapharm Consulting",
       "logo": "/assets/logos/partners/menapharm-consulting.png",
       "country": "Europe"
@@ -278,13 +275,18 @@
       "name": "Bahwan Healthcare Centre",
       "logo": "/assets/logos/partners/bahwan-healthcare-centre.png",
       "country": "Oman"
+    },
+    {
+      "name": "Ultra Pharma",
+      "logo": "/assets/logos/partners/ultra-pharma.png",
+      "country": "Saudi Arabia"
     }
   ],
   "journey": [
     {
       "year": "Founding Vision",
       "title": "The MENA Healthcare Link",
-      "description": "ZYVENTA was established to serve as a vital link between international healthcare companies and the burgeoning markets of the Arabian Gulf and Middle East."
+      "description": "Zyventa Biocare was established to serve as a vital link between international healthcare companies and the burgeoning markets of the Arabian Gulf and Middle East."
     },
     {
       "year": "Division Expansion",
@@ -298,8 +300,8 @@
     },
     {
       "year": "Digital Transformation",
-      "title": "Online Store & Bulk Supply",
-      "description": "Launched online digital commerce channels alongside competitive wholesale supply for medical facilities."
+      "title": "Online Store",
+      "description": "Launched online digital commerce channels for healthcare and wellness products."
     },
     {
       "year": "Today",
@@ -326,8 +328,7 @@
       "image": "/assets/images/zyvenkar-5-20mg.jpg",
       "images": [{"label": "5/20 mg", "src": "/assets/images/zyvenkar-5-20mg.jpg"}, {"label": "5/40 mg", "src": "/assets/images/zyvenkar-5-40mg.jpg"}, {"label": "10/20 mg", "src": "/assets/images/zyvenkar-10-20mg.jpg"}, {"label": "10/40 mg", "src": "/assets/images/zyvenkar-10-40mg.jpg"}],
       "therapy": "Therapy - Cardiovascular",
-      "isStore": false,
-      "isWholesale": true
+      "isStore": false
     },
     {
       "id": "desvenzyl",
@@ -347,8 +348,7 @@
       "image": "/assets/images/desvenzyl-50mg.jpg",
       "images": [{"label": "50 mg", "src": "/assets/images/desvenzyl-50mg.jpg"}, {"label": "100 mg", "src": "/assets/images/desvenzyl-100mg.jpg"}],
       "therapy": "Therapy - CNS & Neurology",
-      "isStore": false,
-      "isWholesale": true
+      "isStore": false
     },
     {
       "id": "lacolep",
@@ -368,8 +368,7 @@
       "image": "/assets/images/lacolep-50mg.jpg",
       "images": [{"label": "50 mg", "src": "/assets/images/lacolep-50mg.jpg"}, {"label": "100 mg", "src": "/assets/images/lacolep-100mg.jpg"}],
       "therapy": "Therapy - CNS & Neurology",
-      "isStore": false,
-      "isWholesale": true
+      "isStore": false
     },
     {
       "id": "febuvent",
@@ -389,8 +388,7 @@
       "image": "/assets/images/febuvent-40mg.jpg",
       "images": [{"label": "40 mg", "src": "/assets/images/febuvent-40mg.jpg"}, {"label": "80 mg", "src": "/assets/images/febuvent-80mg.jpg"}],
       "therapy": "Therapy - Orthopedic & Pain Care",
-      "isStore": false,
-      "isWholesale": true
+      "isStore": false
     },
     {
       "id": "akthyod",
@@ -410,8 +408,7 @@
       "image": "/assets/images/akthyod-5mg.jpg",
       "images": [{"label": "5 mg", "src": "/assets/images/akthyod-5mg.jpg"}, {"label": "20 mg", "src": "/assets/images/akthyod-20mg.jpg"}],
       "therapy": "Therapy - Metabolic & Diabetes",
-      "isStore": false,
-      "isWholesale": true
+      "isStore": false
     },
     {
       "id": "nourisil-md",
@@ -431,7 +428,18 @@
       "image": "/assets/images/nourisil-md.jpg",
       "therapy": "Therapy - Dermatology",
       "isStore": true,
-      "isWholesale": true
+      "marketplaces": [
+        {
+          "label": "10 g tube",
+          "amazon": "https://www.amazon.ae/dp/B0DFTNC4WT",
+          "noon": "https://www.noon.com/uae-en/product/Z9166A20C865E0D214BBEZ/p/?o=z9166a20c865e0d214bbez-1"
+        },
+        {
+          "label": "30 g pump",
+          "amazon": "https://www.amazon.ae/dp/B0DKVN4F6S",
+          "noon": "https://www.noon.com/uae-en/product/Z6CACD890E5DC2E87FB39Z/p/?o=z6cacd890e5dc2e87fb39z-1"
+        }
+      ]
     },
     {
       "id": "nevral",
@@ -451,7 +459,12 @@
       "image": "/assets/images/nevral.jpg",
       "therapy": "Therapy - CNS & Neurology",
       "isStore": true,
-      "isWholesale": true
+      "marketplaces": [
+        {
+          "amazon": "https://www.amazon.ae/dp/B0H9NQGLFZ",
+          "noon": "https://www.noon.com/uae-en/product/ZB4783E6302311BADBF1FZ/p/?o=zb4783e6302311badbf1fz-1"
+        }
+      ]
     },
     {
       "id": "calmi-relax",
@@ -472,7 +485,11 @@
       "images": [{"label": "Pack", "src": "/assets/images/calmirelax-front.jpg"}, {"label": "With tablets", "src": "/assets/images/calmirelax-pills.jpg"}],
       "therapy": "Therapy - CNS & Neurology",
       "isStore": true,
-      "isWholesale": true
+      "marketplaces": [
+        {
+          "amazon": "https://www.amazon.ae/dp/B0DHF4J5MX"
+        }
+      ]
     },
     {
       "id": "calmi-dormin",
@@ -493,7 +510,11 @@
       "images": [{"label": "Pack", "src": "/assets/images/calmidormin-night.jpg"}, {"label": "With tablets", "src": "/assets/images/calmidormin-pills.jpg"}],
       "therapy": "Therapy - CNS & Neurology",
       "isStore": true,
-      "isWholesale": true
+      "marketplaces": [
+        {
+          "amazon": "https://www.amazon.ae/dp/B0DKD2JKS5"
+        }
+      ]
     },
     {
       "id": "calmivenal-gel",
@@ -503,7 +524,7 @@
       "description": "Discover targeted comfort with Calmivenal Gel, specially formulated for local haemorrhoid care. Its soothing combination of ingredients helps relieve irritation, itching, burning, swelling and discomfort while supporting recovery of sensitive skin in the affected area.",
       "packSize": "40 g gel",
       "availableStrengths": "",
-      "category": "Gastroenterology",
+      "category": "Anorectal Care",
       "rawCategory": "Gastro",
       "features": "1. Helps relieve itching and burning\n2. Helps soothe irritation and discomfort\n3. Helps reduce swelling associated with haemorrhoids\n4. Supports recovery of irritated skin and mucous membranes\n5. Combination of flavonoids and botanical components\n6. Designed specifically for application in the anal area",
       "usage": "Apply Calmivenal Gel to the affected anal area according to the instructions provided with the product or as advised by a healthcare professional.\n\nThe area should be cleaned gently before application.",
@@ -511,9 +532,14 @@
       "prescription": "Prescription (Rx)",
       "closingLine": "Soothing local care where comfort matters most.",
       "image": "/assets/images/calmivenal-gel.jpg",
-      "therapy": "Therapy - Gastroenterology",
+      "therapy": "Therapy - Anorectal Care",
       "isStore": true,
-      "isWholesale": true
+      "marketplaces": [
+        {
+          "amazon": "https://www.amazon.ae/dp/B0DHNZ6KXK",
+          "noon": "https://www.noon.com/uae-en/product/Z53C9D66F463C0E80D31BZ/p/?o=z53c9d66f463c0e80d31bz-1"
+        }
+      ]
     },
     {
       "id": "troximetacin-gel",
@@ -532,8 +558,13 @@
       "closingLine": "Targeted relief that goes straight to the area of discomfort.",
       "image": "/assets/images/troximetacin-gel.jpg",
       "therapy": "Therapy - Orthopedic & Pain Care",
-      "isStore": false,
-      "isWholesale": true
+      "isStore": true,
+      "marketplaces": [
+        {
+          "amazon": "https://www.amazon.ae/dp/B0DHFBB1PH",
+          "noon": "https://www.noon.com/uae-en/product/ZB1CDBA39356435B4D560Z/p/?o=ff932a2286c830fc"
+        }
+      ]
     },
     {
       "id": "breezex",
@@ -553,14 +584,19 @@
       "image": "/assets/images/breezex.jpg",
       "therapy": "Therapy - Orthopedic & Pain Care",
       "isStore": true,
-      "isWholesale": true
+      "marketplaces": [
+        {
+          "amazon": "https://www.amazon.ae/dp/B0HKP1JBBZ",
+          "noon": "https://www.noon.com/uae-en/product/ZBB8C3EFE6BDBA4867C8BZ/p/?o=b0aed89968238cfd"
+        }
+      ]
     },
     {
       "id": "zyflex",
       "name": "Zyflex",
-      "tagline": "Long-lasting patch relief for muscle pain and stiffness",
+      "tagline": "Warm and cold therapy patch for long-lasting relief",
       "composition": "Wintergreen Oil 7%, Menthol 7%, Camphor 7%, Eucalyptus Oil 1%, Clove Oil 1%",
-      "description": "Experience long-lasting relief with Zyflex Patches. Its powerful combination of natural ingredients provides targeted support for backache, joint pain, muscle pain and stiffness for up to 12 hours.",
+      "description": "Experience long-lasting relief with the Zyflex warm and cold therapy patch. Its powerful combination of natural ingredients provides targeted support for backache, joint pain, muscle pain and stiffness for up to 12 hours.",
       "packSize": "9 patches (3 patches × 3 pouches)",
       "availableStrengths": "",
       "category": "Orthopedic & Pain Care",
@@ -573,7 +609,12 @@
       "image": "/assets/images/zyflex.jpg",
       "therapy": "Therapy - Orthopedic & Pain Care",
       "isStore": true,
-      "isWholesale": true
+      "marketplaces": [
+        {
+          "amazon": "https://www.amazon.ae/dp/B0HKNSCVT4",
+          "noon": "https://www.noon.com/uae-en/product/Z5B864AF17DE9D9131510Z/p/?o=f5cb3010670d1fcc"
+        }
+      ]
     },
     {
       "id": "zynatis",
@@ -592,8 +633,18 @@
       "closingLine": "Focused relief, exactly where you need it.",
       "image": "/assets/images/zynatis.jpg",
       "therapy": "Therapy - Orthopedic & Pain Care",
-      "isStore": false,
-      "isWholesale": true
+      "isStore": true,
+      "marketplaces": [
+        {
+          "label": "5 patches",
+          "amazon": "https://www.amazon.ae/dp/B0GZS54DLJ",
+          "noon": "https://www.noon.com/uae-en/product/ZDF98EEB19D274EB5E87AZ/p/?o=f9c863a10b8f642a"
+        },
+        {
+          "label": "10 patches",
+          "amazon": "https://www.amazon.ae/dp/B0H42NX1Y2"
+        }
+      ]
     },
     {
       "id": "zybitel",
@@ -613,8 +664,7 @@
       "image": "/assets/images/zybitel-80-5mg.jpg",
       "images": [{"label": "80/5 mg", "src": "/assets/images/zybitel-80-5mg.jpg"}, {"label": "80/10 mg", "src": "/assets/images/zybitel-80-10mg.jpg"}],
       "therapy": "Therapy - Cardiovascular",
-      "isStore": false,
-      "isWholesale": true
+      "isStore": false
     },
     {
       "id": "vildagard",
@@ -634,8 +684,7 @@
       "image": "/assets/images/vildagard-50-500mg.jpg",
       "images": [{"label": "50/500 mg", "src": "/assets/images/vildagard-50-500mg.jpg"}, {"label": "50/850 mg", "src": "/assets/images/vildagard-50-850mg.jpg"}, {"label": "50/1000 mg", "src": "/assets/images/vildagard-50-1000mg.jpg"}],
       "therapy": "Therapy - Metabolic & Diabetes",
-      "isStore": false,
-      "isWholesale": true
+      "isStore": false
     },
     {
       "id": "telmijub",
@@ -655,29 +704,28 @@
       "image": "/assets/images/telmijub-40mg.jpg",
       "images": [{"label": "40 mg", "src": "/assets/images/telmijub-40mg.jpg"}, {"label": "80 mg", "src": "/assets/images/telmijub-80mg.jpg"}],
       "therapy": "Therapy - Cardiovascular",
-      "isStore": false,
-      "isWholesale": true
+      "isStore": false
     }
   ],
   "faqs": [
     {
-      "question": "What regions does Zyventa serve?",
-      "answer": "ZYVENTA serves the Arabian Gulf (GCC) countries and the broader Middle East and North Africa (MENA) markets, connecting international healthcare brands with regional distributors, pharmacies, and healthcare systems."
+      "question": "What regions does Zyventa Biocare serve?",
+      "answer": "Zyventa Biocare serves the Arabian Gulf (GCC) countries and the broader Middle East and North Africa (MENA) markets, connecting international healthcare brands with regional distributors, pharmacies, and healthcare systems."
     },
     {
-      "question": "What services does Zyventa offer?",
-      "answer": "Zyventa integrates five core divisions: Business Development & Partnerships, Regulatory Affairs & Compliance, Strategic Marketing, Medical Sales Detailing, and Seamless Wholesale & Retail Distribution."
+      "question": "What services does Zyventa Biocare offer?",
+      "answer": "Zyventa Biocare integrates five core divisions: Business Development & Partnerships, Regulatory Affairs & Compliance, Strategic Marketing, Medical Sales Detailing, and Seamless Pharmacy Distribution."
     },
     {
-      "question": "How does Zyventa ensure compliance with regulatory requirements?",
+      "question": "How does Zyventa Biocare ensure compliance with regulatory requirements?",
       "answer": "Our in-house regulatory team closely coordinates with regional health authorities including MOHAP (UAE) and other GCC bodies to manage product dossiers, fast-track registration, and maintain rigorous pharmacovigilance standards."
     },
     {
-      "question": "What sets Zyventa's marketing strategies apart?",
+      "question": "What sets Zyventa Biocare's marketing strategies apart?",
       "answer": "Our marketing team combines traditional on-site detailing and medical education with innovative digital marketing strategies, creating comprehensive demand generation from concept to customer."
     },
     {
-      "question": "How does Zyventa manage its distribution network?",
+      "question": "How does Zyventa Biocare manage its distribution network?",
       "answer": "We supply hospitals, government bodies, retail pharmacy chains and online channels through Zyventa Trading, our MOH-approved Bait Al Mas drug store, Zyventa Biocare, and a network of licensed local distributors."
     }
   ],
@@ -685,12 +733,12 @@
     {
       "slug": "empowering-healthcare-vital-role",
       "title": "Empowering Healthcare: The Vital Role of a Medicine Distributor and Online Seller",
-      "author": "The Zyventa Team",
+      "author": "The Zyventa Biocare Team",
       "date": "March 29, 2024",
-      "excerpt": "In today's ever-evolving healthcare landscape, the importance of effective medicine distribution and online selling cannot be overstated. As a leading player in this field, Zyventa has positioned itself as a vital link between international healthcare companies and the burgeoning markets of the Arabian Gulf and the Middle East.",
+      "excerpt": "In today's ever-evolving healthcare landscape, the importance of effective medicine distribution and online selling cannot be overstated. As a leading player in this field, Zyventa Biocare has positioned itself as a vital link between international healthcare companies and the burgeoning markets of the Arabian Gulf and the Middle East.",
       "content": [
-        "In today's ever-evolving healthcare landscape, the importance of effective medicine distribution and online selling cannot be overstated. As a leading player in this field, Zyventa has positioned itself as a vital link between international healthcare companies and the burgeoning markets of the Arabian Gulf and the Middle East. With a firm commitment to bridging access gaps and promoting innovative healthcare solutions, Zyventa's role goes far beyond simply distributing medications. Therefore, it's about facilitating change and improving lives.",
-        "ZYVENTA was founded to serve as a link between international healthcare companies and the growing markets of Arabian Gulf and the Middle East. ZYVENTA bridges access gaps by partnering with global pharmaceutical and biotechnology companies to deploy and commercialize new pharmaceutical, biologics, and other healthcare solutions in the Middle East and North Africa (MENA) markets.",
+        "In today's ever-evolving healthcare landscape, the importance of effective medicine distribution and online selling cannot be overstated. As a leading player in this field, Zyventa Biocare has positioned itself as a vital link between international healthcare companies and the burgeoning markets of the Arabian Gulf and the Middle East. With a firm commitment to bridging access gaps and promoting innovative healthcare solutions, Zyventa Biocare's role goes far beyond simply distributing medications. Therefore, it's about facilitating change and improving lives.",
+        "Zyventa Biocare was founded to serve as a link between international healthcare companies and the growing markets of Arabian Gulf and the Middle East. Zyventa Biocare bridges access gaps by partnering with global pharmaceutical and biotechnology companies to deploy and commercialize new pharmaceutical, biologics, and other healthcare solutions in the Middle East and North Africa (MENA) markets.",
         "We recognize that our team is what makes us who we are. We pride ourselves on our professional, highly skilled and dedicated staff, each bringing their own unique skills to the business."
       ]
     }
@@ -702,7 +750,7 @@
     "Orthopedic & Pain Care",
     "Metabolic & Diabetes",
     "Dermatology",
-    "Gastroenterology"
+    "Anorectal Care"
   ],
   "portfolioGrowth": [
     {
@@ -744,7 +792,7 @@
       },
       {
         "name": "Breezex",
-        "use": "Cold therapy for pain"
+        "use": "Cold therapy patch for pain"
       },
       {
         "name": "Zynatis",
@@ -752,15 +800,15 @@
       },
       {
         "name": "Zyflex",
-        "use": "Muscle stiffness patch"
+        "use": "Warm and cold patch"
       },
       {
         "name": "Nervease",
         "use": "Neuropathic pain"
       },
       {
-        "name": "Cardiovive",
-        "use": "Heart health"
+        "name": "Vildagard",
+        "use": "Diabetes"
       },
       {
         "name": "Nourisil MD",
@@ -874,6 +922,10 @@
       "location": "Al Qusais 4, Dubai, UAE"
     }
   ],
+  "scientificOffice": {
+    "heading": "Scientific Office",
+    "name": "Sevana Pharma"
+  },
   "drugStore": {
     "name": "Bait Al Mas Drug Store LLC",
     "location": "Abu Shagara, Sharjah",
