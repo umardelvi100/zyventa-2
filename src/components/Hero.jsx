@@ -76,7 +76,7 @@ export default function Hero() {
               <dt className="sr-only">{stat.label}</dt>
               {stat.display ? (
                 // A word instead of a figure (e.g. "Worldwide"), in the accent colour.
-                <dd className="font-display text-4xl sm:text-5xl text-brand-green">{stat.display}</dd>
+                <dd className="font-display text-2xl sm:text-5xl lg:text-4xl xl:text-5xl text-brand-green">{stat.display}</dd>
               ) : (
                 <dd className="font-display text-4xl sm:text-5xl text-white">
                   <CountUp value={stat.value} /><span className="text-brand-green">{stat.suffix}</span>

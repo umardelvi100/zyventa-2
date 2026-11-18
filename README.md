@@ -19,7 +19,7 @@ This project rebuilds **Zyventa (https://zyventa.com/)** inside the modern layou
    - **Our Journey**: Step-by-step milestone timeline with vertical line.
    - **Our Brands**: Alternating product showcase cards with modal inquiry.
    - **Leadership Spotlight**: Split portrait and team philosophy quote.
-   - **Inner Pages**: About Us, Services, Our Range Products (Wholesale), Online Store, Careers, FAQ, Blogs & Single Post, Contact Us (with working interactive form and map).
+   - **Inner Pages**: About Us, Services, Our Range Products, Online Store, Careers, FAQ, Blogs & Single Post, Contact Us (with working interactive form and map).
 
 ---
 
@@ -75,7 +75,7 @@ zyventa-site/
 │   │   ├── contact-us/      # Contact details, form & map
 │   │   ├── faq/             # Interactive FAQ accordions
 │   │   ├── online-store/    # Consumer & OTC product store
-│   │   ├── our-range-products/ # Wholesale bulk pharmaceuticals
+│   │   ├── our-range-products/ # Bulk pharmaceuticals
 │   │   ├── services/        # 5 Core divisions & capabilities
 │   │   ├── globals.css      # Design tokens, marquee animations, glassmorphism
 │   │   ├── layout.js        # Root layout with Header and Footer
