@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Reveal } from '@/components/Motion';
+import contentData from '@/data/zyventaContent.json';
 
 // Navy closing band used at the bottom of every page.
 export default function HomeCta({
-  eyebrow = 'Work with us',
-  title = 'Bringing a product to the region?',
-  accent = "Let's talk.",
-  primary = { href: '/contact-us', label: 'Contact us' },
-  secondary = { href: '/our-range-products', label: 'Product range' },
+  eyebrow = 'Inquiries',
+  title = 'For inquiries, contact us on email.',
+  accent = contentData.site.email,
+  primary = { href: `mailto:${contentData.site.email}`, label: 'Email us' },
+  secondary = null,
 }) {
   return (
     <section className="bg-brand-navy text-brand-paper">

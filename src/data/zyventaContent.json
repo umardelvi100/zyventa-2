@@ -8,6 +8,8 @@
     "logo": "/assets/logos/zyventa-biocare-logo.png",
     "logoWhite": "/assets/logos/zyventa-biocare-logo-white.png",
     "email": "contact@zyventa.com",
+    "phone": "+971 4 269 7366",
+    "phoneHref": "+97142697366",
     "address": "Office No. 323, 3rd Floor, Al Rehan Block, Omniyat Building, Al Mamzar, Dubai, UAE",
     "aboutText": "Zyventa Biocare was founded to serve as a link between international healthcare companies and the growing markets of Arabian Gulf and the Middle East. Zyventa Biocare bridges access gaps by partnering with global pharmaceutical and biotechnology companies to deploy and commercialize new pharmaceutical, biologics, and other healthcare solutions in the Middle East and North Africa (MENA) markets.",
     "aboutSubtext": "At Zyventa Biocare, we pride ourselves on our comprehensive approach to establishing and enhancing brand presence within the region's dynamic healthcare landscape. Our dedicated team oversees every phase and process necessary to cultivate a strong brand identity and market presence. With meticulous attention to detail, we integrate five essential divisions: Business Development, Regulation, Marketing, Sales and Distribution.",
@@ -416,7 +418,7 @@
       "tagline": "The gold standard for scar management",
       "composition": "Medical-grade blend of five silicones + Vitamin E",
       "description": "Discover advanced scar care with Nourisil MD, an ultra-light and transparent silicone gel designed to improve the appearance of new and old scars. Its smooth, self-drying formula helps soften and flatten scars while fitting effortlessly into everyday skincare routines.",
-      "packSize": "10 g tube, 30 g pump",
+      "packSize": "10 g tube",
       "availableStrengths": "",
       "category": "Dermatology",
       "rawCategory": "Derma",
@@ -430,12 +432,31 @@
       "isStore": true,
       "marketplaces": [
         {
-          "label": "10 g tube",
           "amazon": "https://www.amazon.ae/dp/B0DFTNC4WT",
           "noon": "https://www.noon.com/uae-en/product/Z9166A20C865E0D214BBEZ/p/?o=z9166a20c865e0d214bbez-1"
-        },
+        }
+      ]
+    },
+    {
+      "id": "nourisil-md-30g",
+      "name": "Nourisil MD 30g",
+      "tagline": "The gold standard for scar management",
+      "composition": "Medical-grade blend of five silicones + Vitamin E",
+      "description": "Discover advanced scar care with Nourisil MD, an ultra-light and transparent silicone gel designed to improve the appearance of new and old scars. Its smooth, self-drying formula helps soften and flatten scars while fitting effortlessly into everyday skincare routines.",
+      "packSize": "30 g pump",
+      "availableStrengths": "",
+      "category": "Dermatology",
+      "rawCategory": "Derma",
+      "features": "1. Helps flatten, soften and smooth scars\n2. Helps reduce scar-associated redness\n3. Helps relieve itching and discomfort associated with scars\n4. Transparent and self-drying formulation\n5. Lightweight, silky and non-greasy feel\n6. Forms a protective, hydrating silicone layer\n7. Suitable for application on areas including the face and joints\n8. Suitable for all skin types, including sensitive skin\n9. Preservative-free and mineral-oil-free",
+      "usage": "Wash your hands and ensure the scar area is clean and dry.\n\nApply a small amount of Nourisil™ MD to the scar.\n\nGently massage the gel over the affected area.\n\nAllow the gel to dry completely.\n\nOnce dry, sunscreen or cosmetics may be applied over the area.\n\nApply twice daily — once in the morning and once at night.",
+      "isRx": false,
+      "prescription": "Over-The-Counter (OTC)",
+      "closingLine": "Professional scar care designed for everyday confidence.",
+      "image": "/assets/images/nourisil-md-30g.webp",
+      "therapy": "Therapy - Dermatology",
+      "isStore": true,
+      "marketplaces": [
         {
-          "label": "30 g pump",
           "amazon": "https://www.amazon.ae/dp/B0DKVN4F6S",
           "noon": "https://www.noon.com/uae-en/product/Z6CACD890E5DC2E87FB39Z/p/?o=z6cacd890e5dc2e87fb39z-1"
         }
@@ -593,7 +614,7 @@
     },
     {
       "id": "zyflex",
-      "name": "Zyflex",
+      "name": "Zyflex – Warm and Cold Therapy Patch",
       "tagline": "Warm and cold therapy patch for long-lasting relief",
       "composition": "Wintergreen Oil 7%, Menthol 7%, Camphor 7%, Eucalyptus Oil 1%, Clove Oil 1%",
       "description": "Experience long-lasting relief with the Zyflex warm and cold therapy patch. Its powerful combination of natural ingredients provides targeted support for backache, joint pain, muscle pain and stiffness for up to 12 hours.",
@@ -799,8 +820,8 @@
         "use": "Lidocaine 4% patch"
       },
       {
-        "name": "Zyflex",
-        "use": "Warm and cold patch"
+        "name": "Zyflex – Warm and Cold Therapy Patch",
+        "use": "Backache, joint and muscle pain"
       },
       {
         "name": "Nervease",
@@ -823,7 +844,7 @@
       "CalmiRelax",
       "CalmiDormin",
       "Breezex (up to 8 hours)",
-      "Zyflex"
+      "Zyflex – Warm and Cold Therapy Patch"
     ]
   },
   "productBadges": {
@@ -833,7 +854,8 @@
       "breezex",
       "zynatis",
       "zyflex",
-      "nourisil-md"
+      "nourisil-md",
+      "nourisil-md-30g"
     ],
     "firstGeneric": [
       "lacolep",
@@ -955,6 +977,7 @@
     "breezex",
     "telmijub",
     "nourisil-md",
+    "nourisil-md-30g",
     "nevral",
     "calmi-relax",
     "calmi-dormin",

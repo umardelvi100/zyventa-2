@@ -219,47 +219,6 @@ export function TherapyTiles({ categories, products, value, onChange }) {
   );
 }
 
-// Compact cards for the first-to-market launches. `items` are { name, use, product? }:
-// ones that match a catalogue product show its photo (whole, at its own proportions)
-// and open its details; the rest are text-only. An even grid with one fixed photo
-// frame keeps every card in a row aligned and the same height.
-export function Spotlight({ items, onOpen }) {
-  const cardClass = 'flex h-full w-full flex-col text-left rounded-xl overflow-hidden bg-white/5 border border-white/10';
-  return (
-    <Reveal stagger className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-stretch">
-      {items.map(({ name, use, product }) => {
-        const body = (
-          <>
-            {product && hasPackShot(product) && (
-              <span className="block relative aspect-[4/3] shrink-0 overflow-hidden bg-brand-paper">
-                <ProductVisual frame product={product} />
-              </span>
-            )}
-            <span className="block flex-1 p-4">
-              <span className="block font-display text-lg leading-snug text-brand-paper">{name}</span>
-              {use && <span className="block mt-1 text-xs text-brand-onDarkMuted leading-relaxed">{use}</span>}
-            </span>
-          </>
-        );
-        return product ? (
-          <button
-            key={name}
-            type="button"
-            onClick={() => onOpen(product)}
-            className={`group ${cardClass} hover:border-brand-green transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-green`}
-          >
-            {body}
-          </button>
-        ) : (
-          <div key={name} className={cardClass}>
-            {body}
-          </div>
-        );
-      })}
-    </Reveal>
-  );
-}
-
 export function ProductCard({ product, onOpen, actionLabel, showMarketplaces = false }) {
   const highlights = productHighlights(product.id);
   const style = therapyStyle(product.category);
@@ -292,7 +251,7 @@ export function ProductCard({ product, onOpen, actionLabel, showMarketplaces = f
             <span className={`tag ${product.isRx ? 'tag-rx' : 'tag-otc'}`}>{product.isRx ? 'Rx' : 'OTC'}</span>
           )}
         </div>
-        <h3 className="mt-3 font-display text-2xl text-brand-navy line-clamp-1">{product.name}</h3>
+        <h3 className="mt-3 font-display text-2xl text-brand-navy line-clamp-2">{product.name}</h3>
         {product.tagline && <p className="mt-1 text-sm text-ink-60 line-clamp-2 min-h-[2.5rem]">{product.tagline}</p>}
         {product.composition && (
           <p className="mt-4 pt-4 border-t border-brand-border text-xs text-ink-80 line-clamp-2 min-h-[3.25rem]">
