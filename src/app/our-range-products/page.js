@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import Link from 'next/link';
 import { ArrowDown, X } from 'lucide-react';
 import contentData from '@/data/zyventaContent.json';
 import ProductDetailModal from '@/components/ProductDetailModal';
@@ -10,7 +9,7 @@ import { CountUp } from '@/components/Motion';
 import HeroSlideshow from '@/components/HeroSlideshow';
 import {
   SearchField, ChipGroup, ProductCard, ProductGrid, EmptyState,
-  TherapyTiles, Spotlight, therapyStyle, hasPackShot,
+  TherapyTiles, therapyStyle, hasPackShot,
 } from '@/components/Catalog';
 
 const RX_OPTIONS = [
@@ -36,13 +35,6 @@ export default function OurRangeProductsPage() {
     ...byId(firstToMarket),
     ...products.filter((p) => !firstToMarket.includes(p.id)),
   ].filter(hasPackShot);
-
-  // Spotlight: the same first-to-market launches the Home page lists, each linked to its
-  // catalogue product when there is one.
-  const spotlightItems = contentData.firstToMarket.regionFirsts.map((launch) => ({
-    ...launch,
-    product: products.find((p) => p.name.toLowerCase().startsWith(launch.name.toLowerCase())),
-  }));
 
   const filteredProducts = products.filter((p) => {
     const searchLower = searchTerm.toLowerCase();
@@ -107,9 +99,6 @@ export default function OurRangeProductsPage() {
               <button type="button" onClick={() => pickArea('All')} className="btn btn-accent">
                 Browse catalogue <ArrowDown className="w-4 h-4" aria-hidden="true" />
               </button>
-              <Link href="/contact-us?type=distribution" className="btn btn-on-dark">
-                Request pricing
-              </Link>
             </div>
             <dl className="mt-12 grid grid-cols-3 max-w-md rounded-xl bg-white/[0.06] ring-1 ring-white/10 backdrop-blur-sm divide-x divide-white/10">
               {stats.map((s) => (
@@ -146,8 +135,22 @@ export default function OurRangeProductsPage() {
             <p className="eyebrow !text-brand-green">Spotlight</p>
             <h2 className="display !text-brand-paper mt-4 text-3xl sm:text-4xl">First to market in the UAE, Oman and <em>KSA</em>.</h2>
           </div>
-          <div className="mt-10">
-            <Spotlight items={spotlightItems} onOpen={setActiveProductModal} />
+          <div className="mt-8">
+            <ol className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8">
+              {contentData.firstToMarket.regionFirsts.map((p, i) => (
+                <li key={p.name} className="grid grid-cols-[1.75rem_1fr] items-baseline py-2.5 border-b border-white/15">
+                  <span className="font-display text-xs text-brand-green">{String(i + 1).padStart(2, '0')}</span>
+                  <span>
+                    <span className="block font-display text-base text-brand-paper">{p.name}</span>
+                    <span className="block text-xs text-brand-onDarkMuted mt-0.5">{p.use}</span>
+                  </span>
+                </li>
+              ))}
+            </ol>
+            <div className="mt-5 border-t-2 border-brand-green pt-4">
+              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-brand-green">First generic entrant in the UAE</p>
+              <p className="mt-1 font-display text-xl text-brand-paper">{contentData.firstToMarket.firstGenerics.join(' and ')}</p>
+            </div>
           </div>
         </div>
       </section>
@@ -191,7 +194,7 @@ export default function OurRangeProductsPage() {
                   key={product.id}
                   product={product}
                   onOpen={setActiveProductModal}
-                  actionLabel="Request a quote"
+                  actionLabel="View product"
                 />
               ))}
             </ProductGrid>
@@ -201,13 +204,7 @@ export default function OurRangeProductsPage() {
         </div>
       </section>
 
-      <HomeCta
-        eyebrow="Enquiries"
-        title="Need supply for your pharmacy or clinic?"
-        accent="Ask for a quote."
-        primary={{ href: '/contact-us?type=distribution', label: 'Request pricing' }}
-        secondary={{ href: '/online-store', label: 'Online store' }}
-      />
+      <HomeCta />
 
       {activeProductModal && (
         <ProductDetailModal product={activeProductModal} onClose={() => setActiveProductModal(null)} />

@@ -1,23 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { X, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { X } from 'lucide-react';
 import { ProductVisual, imageRatio } from '@/components/Catalog';
-import { submitEnquiry, enquiryMailto } from '@/lib/submitEnquiry';
-import contentData from '@/data/zyventaContent.json';
 import MarketplaceLinks from '@/components/MarketplaceLinks';
 
 export default function ProductDetailModal({ product, onClose, showMarketplaces = false }) {
-  const [showInquiryForm, setShowInquiryForm] = useState(false);
-  const [inquirySubmitted, setInquirySubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    quantity: '100',
-  });
-  const [sending, setSending] = useState(false);
-  const [error, setError] = useState(false);
   const variants = product.images || [];
   const [variantIndex, setVariantIndex] = useState(0);
   const shown = variants[variantIndex] ? { ...product, image: variants[variantIndex].src } : product;
@@ -30,22 +18,6 @@ export default function ProductDetailModal({ product, onClose, showMarketplaces 
   }, [onClose]);
 
   if (!product) return null;
-
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
-    setSending(true);
-    setError(false);
-    const result = await submitEnquiry('product', {
-      ...formData,
-      product: product.name,
-      website: e.target.website.value,
-    });
-    setSending(false);
-    if (result.ok) setInquirySubmitted(true);
-    else setError(true);
-  };
-
-  const update = (key) => (e) => setFormData({ ...formData, [key]: e.target.value });
 
   const specs = [
     ['Active composition', product.composition],
@@ -128,68 +100,11 @@ export default function ProductDetailModal({ product, onClose, showMarketplaces 
               <MarketplaceLinks product={product} className="mt-8 pt-6 border-t border-brand-border" />
             )}
 
-            {showInquiryForm && (
-              <div className="mt-8 pt-6 border-t border-brand-border animate-fade-up">
-                {inquirySubmitted ? (
-                  <div className="flex items-center gap-3 text-brand-navy">
-                    <CheckCircle2 className="w-6 h-6 text-brand-green" />
-                    <div>
-                      <p className="font-bold text-sm">Enquiry received</p>
-                      <p className="text-xs text-ink-60">Our distribution team will be in touch.</p>
-                    </div>
-                  </div>
-                ) : (
-                  <form onSubmit={handleFormSubmit} className="grid sm:grid-cols-2 gap-4">
-                    <label>
-                      <span className="field-label">Name or organisation</span>
-                      <input required type="text" value={formData.name} onChange={update('name')} className="field" />
-                    </label>
-                    <label>
-                      <span className="field-label">Email</span>
-                      <input required type="email" value={formData.email} onChange={update('email')} className="field" />
-                    </label>
-                    <label>
-                      <span className="field-label">Phone or WhatsApp</span>
-                      <input type="tel" placeholder="+971" value={formData.phone} onChange={update('phone')} className="field" />
-                    </label>
-                    <label>
-                      <span className="field-label">Units required</span>
-                      <input type="number" min="1" value={formData.quantity} onChange={update('quantity')} className="field" />
-                    </label>
-                    <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
-                    {error && (
-                      <p role="alert" className="sm:col-span-2 text-sm text-red-700">
-                        Your enquiry couldn&apos;t be sent right now.{' '}
-                        <a
-                          href={enquiryMailto(contentData.site.email, `Product enquiry · ${product.name}`, [
-                            `Product: ${product.name}`,
-                            `Units required: ${formData.quantity}`,
-                            '',
-                            formData.name,
-                            formData.phone,
-                          ])}
-                          className="font-bold underline"
-                        >
-                          Email it to us
-                        </a>{' '}
-                        instead.
-                      </p>
-                    )}
-                    <button type="submit" disabled={sending} className="btn btn-solid sm:col-span-2 justify-center disabled:opacity-60">
-                      {sending ? 'Sending…' : 'Send enquiry'} <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                    </button>
-                  </form>
-                )}
-              </div>
-            )}
           </div>
         </div>
 
         <div className="px-6 sm:px-10 py-4 border-t border-brand-border bg-white flex flex-wrap items-center justify-between gap-3">
           <p className="text-xs text-ink-60">Available across UAE and GCC distribution channels</p>
-          <button type="button" onClick={() => setShowInquiryForm(!showInquiryForm)} className="btn btn-solid !py-2.5">
-            {showInquiryForm ? 'Hide form' : 'Request pricing and stock'} <ArrowRight className="w-4 h-4" aria-hidden="true" />
-          </button>
         </div>
       </div>
     </div>

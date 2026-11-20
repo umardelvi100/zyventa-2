@@ -81,13 +81,7 @@ export default function OnlineStorePage() {
         </div>
       </section>
 
-      <HomeCta
-        eyebrow="Ordering"
-        title="Ordering for a pharmacy or clinic?"
-        accent="Talk to our team."
-        primary={{ href: '/our-range-products', label: 'Our range' }}
-        secondary={{ href: '/contact-us', label: 'Contact us' }}
-      />
+      <HomeCta />
 
       {activeModalProduct && (
         <ProductDetailModal product={activeModalProduct} onClose={() => setActiveModalProduct(null)} showMarketplaces />
