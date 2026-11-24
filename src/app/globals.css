@@ -379,3 +379,15 @@ h1.font-heading, h2.font-heading, h3.font-heading {
 :is(.motion-ok, .motion-reduce) .reveal-stagger.is-visible > *:nth-child(7) { animation-delay: .48s; }
 :is(.motion-ok, .motion-reduce) .reveal-stagger.is-visible > *:nth-child(8) { animation-delay: .56s; }
 :is(.motion-ok, .motion-reduce) .reveal-stagger.is-visible > *:nth-child(n+9) { animation-delay: .62s; }
+
+/* Homepage hero: two photos crossfade in the same slot (first photo only when motion is reduced). */
+@keyframes hero-fade {
+  0%, 42% { opacity: 1; }
+  50%, 92% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.hero-fade-a { animation: hero-fade 12s ease-in-out infinite; }
+.hero-fade-b { animation: hero-fade 12s ease-in-out -6s infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade-a, .hero-fade-b { animation: none !important; }
+}

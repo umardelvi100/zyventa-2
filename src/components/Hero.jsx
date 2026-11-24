@@ -26,15 +26,14 @@ export default function Hero() {
     <section id="hero" className="bg-brand-paper pt-20">
       {/* Headline over the photo: statement on the faded left, pharmacy photo on the right */}
       <div className="relative isolate overflow-hidden">
-        <img
-          src="/assets/images/hero-pharmacy-shelf.webp"
-          alt=""
-          width={1672}
-          height={941}
-          className="hidden lg:block absolute inset-y-0 right-0 -z-10 w-[76%] h-full object-cover object-right"
+        <div
+          className="hidden lg:block absolute inset-y-0 right-0 -z-10 w-[76%] h-full"
           style={{ maskImage: 'linear-gradient(to right, transparent 0%, transparent 14%, #000 42%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, transparent 14%, #000 42%)' }}
           aria-hidden="true"
-        />
+        >
+          <img src="/assets/images/hero-pharmacy-products.webp" alt="" width={1672} height={941} fetchPriority="high" className="hero-fade-a absolute inset-0 h-full w-full object-cover object-right" />
+          <img src="/assets/images/hero-pharmacy-closeup.webp" alt="" width={1160} height={652} className="hero-fade-b absolute inset-0 h-full w-full object-cover object-[40%_center] opacity-0" />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:min-h-[34rem] flex items-center">
             <div className="py-14 sm:py-20 lg:max-w-[46%] reveal">
@@ -56,13 +55,22 @@ export default function Hero() {
           </div>
         </div>
         {/* Photo below the text on tablet and phone */}
-        <img
-          src="/assets/images/hero-pharmacy-shelf.webp"
-          alt="Zyventa Biocare pharmacists beside a shelf of Zyventa Biocare products in a Dubai distribution centre"
-          width={1672}
-          height={941}
-          className="lg:hidden block w-full h-auto"
-        />
+        <div className="lg:hidden relative w-full aspect-[1672/941] overflow-hidden">
+          <img
+            src="/assets/images/hero-pharmacy-products.webp"
+            alt="Zyventa Biocare pain-care products on display in a Dubai pharmacy and distribution centre"
+            width={1672}
+            height={941}
+            className="hero-fade-a absolute inset-0 h-full w-full object-cover"
+          />
+          <img
+            src="/assets/images/hero-pharmacy-closeup.webp"
+            alt=""
+            width={1160}
+            height={652}
+            className="hero-fade-b absolute inset-0 h-full w-full object-cover opacity-0"
+          />
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,19 +79,19 @@ export default function Hero() {
           {contentData.stats.map((stat, i) => (
             <div
               key={stat.label}
-              className={`py-5 sm:py-6 px-6 border-white/15 ${i % 2 === 1 ? 'border-l' : ''} ${i === 2 ? 'lg:border-l' : ''} ${i >= 2 ? 'border-t lg:border-t-0' : ''}`}
+              className={`py-3 sm:py-3.5 px-5 sm:px-6 border-white/15 ${i % 2 === 1 ? 'border-l' : ''} ${i === 2 ? 'lg:border-l' : ''} ${i >= 2 ? 'border-t lg:border-t-0' : ''}`}
             >
               <dt className="sr-only">{stat.label}</dt>
               {stat.display ? (
                 // A word instead of a figure (e.g. "Worldwide"), in the accent colour.
-                <dd className="font-display text-2xl sm:text-4xl text-brand-green">{stat.display}</dd>
+                <dd className="font-display text-2xl sm:text-3xl leading-none text-brand-green">{stat.display}</dd>
               ) : (
-                <dd className="font-display text-3xl sm:text-4xl text-white">
+                <dd className="font-display text-2xl sm:text-3xl leading-none text-white">
                   <CountUp value={stat.value} /><span className="text-brand-green">{stat.suffix}</span>
                 </dd>
               )}
-              <dd className="mt-1 text-sm font-semibold text-white">{stat.label}</dd>
-              <dd className="mt-0.5 text-xs sm:text-sm text-brand-onDarkMuted leading-snug">{stat.description}</dd>
+              <dd className="mt-1.5 text-sm font-semibold text-white">{stat.label}</dd>
+              <dd className="text-xs text-brand-onDarkMuted leading-snug">{stat.description}</dd>
             </div>
           ))}
         </dl>
