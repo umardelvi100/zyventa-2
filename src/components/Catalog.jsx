@@ -112,12 +112,11 @@ export function ProductVisual({ product, size = 'card', imgClassName = '', fill 
   );
 }
 
-// Achievement badges from the company portfolio (first-to-market, owned brands).
+// Achievement badges from the company portfolio (first-to-market, first generic).
 export function productHighlights(id) {
   const out = [];
   if (productBadges.firstToMarket.includes(id)) out.push('First to market');
   if (productBadges.firstGeneric.includes(id)) out.push('First generic in UAE');
-  if (productBadges.owned.includes(id)) out.push('Zyventa Biocare brand');
   return out;
 }
 
@@ -234,7 +233,7 @@ export function ProductCard({ product, onOpen, actionLabel, showMarketplaces = f
         {highlights.length > 0 && (
           <span className="absolute top-3 left-3 flex flex-col items-start gap-1">
             {highlights.map((h) => (
-              <span key={h} className={`tag ${h === 'Zyventa Biocare brand' ? 'bg-brand-navy text-brand-paper' : 'bg-brand-green text-brand-darkBlue'}`}>{h}</span>
+              <span key={h} className="tag bg-brand-green text-brand-darkBlue">{h}</span>
             ))}
           </span>
         )}

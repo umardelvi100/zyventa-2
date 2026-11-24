@@ -15,7 +15,9 @@ export default function TrackRecord() {
               <li key={p.name} className="grid grid-cols-[2rem_1fr] items-baseline py-3 border-b border-white/15">
                 <span className="font-display text-sm text-brand-green">{String(i + 1).padStart(2, '0')}</span>
                 <span>
-                  <span className="block font-display text-xl">{p.name}</span>
+                  {p.name.split(' – ').map((part) => (
+                    <span key={part} className="block font-display text-xl">{part}</span>
+                  ))}
                   <span className="block text-xs text-brand-onDarkMuted mt-0.5">{p.use}</span>
                 </span>
               </li>
