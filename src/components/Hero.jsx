@@ -71,19 +71,19 @@ export default function Hero() {
           {contentData.stats.map((stat, i) => (
             <div
               key={stat.label}
-              className={`py-8 sm:py-10 px-6 border-white/15 ${i % 2 === 1 ? 'border-l' : ''} ${i === 2 ? 'lg:border-l' : ''} ${i >= 2 ? 'border-t lg:border-t-0' : ''}`}
+              className={`py-5 sm:py-6 px-6 border-white/15 ${i % 2 === 1 ? 'border-l' : ''} ${i === 2 ? 'lg:border-l' : ''} ${i >= 2 ? 'border-t lg:border-t-0' : ''}`}
             >
               <dt className="sr-only">{stat.label}</dt>
               {stat.display ? (
                 // A word instead of a figure (e.g. "Worldwide"), in the accent colour.
-                <dd className="font-display text-2xl sm:text-5xl lg:text-4xl xl:text-5xl text-brand-green">{stat.display}</dd>
+                <dd className="font-display text-2xl sm:text-4xl text-brand-green">{stat.display}</dd>
               ) : (
-                <dd className="font-display text-4xl sm:text-5xl text-white">
+                <dd className="font-display text-3xl sm:text-4xl text-white">
                   <CountUp value={stat.value} /><span className="text-brand-green">{stat.suffix}</span>
                 </dd>
               )}
-              <dd className="mt-2 text-sm font-semibold text-white">{stat.label}</dd>
-              <dd className="mt-1 text-xs sm:text-sm text-brand-onDarkMuted leading-relaxed">{stat.description}</dd>
+              <dd className="mt-1 text-sm font-semibold text-white">{stat.label}</dd>
+              <dd className="mt-0.5 text-xs sm:text-sm text-brand-onDarkMuted leading-snug">{stat.description}</dd>
             </div>
           ))}
         </dl>
