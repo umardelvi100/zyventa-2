@@ -27,16 +27,16 @@ export default function Hero() {
       {/* Headline over the photo: statement on the faded left, pharmacy photo on the right */}
       <div className="relative isolate overflow-hidden">
         <div
-          className="hidden lg:block absolute inset-y-0 right-0 -z-10 w-[76%] h-full"
+          className="hidden lg:block absolute top-0 right-0 -z-10 w-[min(76vw,70rem)] aspect-[1672/941]"
           style={{ maskImage: 'linear-gradient(to right, transparent 0%, transparent 14%, #000 42%)', WebkitMaskImage: 'linear-gradient(to right, transparent 0%, transparent 14%, #000 42%)' }}
           aria-hidden="true"
         >
-          <img src="/assets/images/hero-pharmacy-products.webp" alt="" width={1672} height={941} fetchPriority="high" className="hero-fade-a absolute inset-0 h-full w-full object-cover object-right" />
-          <img src="/assets/images/hero-pharmacy-closeup.webp" alt="" width={1160} height={652} className="hero-fade-b absolute inset-0 h-full w-full object-cover object-[40%_center] opacity-0" />
+          <img src="/assets/images/hero-pharmacy-products.webp" alt="" width={1672} height={941} fetchPriority="high" className="hero-fade-a absolute inset-0 h-full w-full object-cover" />
+          <img src="/assets/images/hero-pharmacy-closeup.webp" alt="" width={1160} height={652} className="hero-fade-b absolute inset-0 h-full w-full object-cover opacity-0" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:min-h-[34rem] flex items-center">
-            <div className="py-14 sm:py-20 lg:max-w-[46%] reveal">
+          <div className="lg:min-h-[calc(min(76vw,70rem)*0.5628)] flex items-center">
+            <div className="py-14 sm:py-20 lg:py-6 lg:max-w-[46%] reveal">
               <h1 className="display max-w-[26rem] sm:max-w-none lg:max-w-[26rem] text-[2.6rem] sm:text-6xl lg:text-[3rem]">
                 Your partner in creating a <em>healthier</em> tomorrow.
               </h1>
